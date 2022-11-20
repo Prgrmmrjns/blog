@@ -1,6 +1,5 @@
 <template>
     <div class="card card-side shadow-xl m-12 bg-lime-400 rounded-xl text-gray-700 font-semibold w-1/2">
-  <figure><img src="genetics.png" alt={{title}} class="w-96"/></figure>
   <div class="card-body w-1/2">
     <h2 class="card-title">{{title}}</h2>
     <p>{{description}}</p>
