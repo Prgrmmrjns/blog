@@ -3,7 +3,7 @@
         <!-- Slide 1 About -->
         <div id="slide1" class="carousel-item relative w-full h-96 place-content-center">
             <div class="flex justify-around bg-gray-800 p-6 pl-12 pr-12 rounded-xl">
-                <img src= "About.jpg" class="max-w-xl rounded-xl" />
+                <img src= "~/assets/About.jpg" class="max-w-xl rounded-xl" />
                 <p class="bg-violet-500 p-4 rounded-2xl text-stone-50 font-black text-2xl w-1/3">
                     Learn more about me and my skills and interests on my <NuxtLink to=/about class="text-lime-400 hover:text-gray-800">About</NuxtLink> page.
                 </p>

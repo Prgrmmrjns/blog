@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss',
         '@nuxt/content',
     ],
-    components: {global: true,
+    components: {
+        global: true,
         dirs: ['~/components']    
-    }, 
+    },
 })

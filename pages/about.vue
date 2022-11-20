@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="flex justify-around gap-6">
-            <img src="About.jpg" alt="Picture of me" class="h-96 rounded-xl m-8">
+            <img src="~/assets/About.jpg" alt="Picture of me" class="h-96 rounded-xl m-8">
             <p class="max-w-5xl bg-violet-500 text-stone-50 p-8 rounded-xl font-semibold leading-10 text-lg m-8">
             Hi! My name is Jonas. I am 22 years old. I was born and raised in Bonn and Troisdorf, Germany. 
             In 2017 I finished school and moved to Maastricht, Netherlands to start my Bachelor Biomedical Sciences. 
