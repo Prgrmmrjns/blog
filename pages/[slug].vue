@@ -5,7 +5,7 @@
         <div class="grid place-items-center p-4 rounded-xl">
           <h1 class="font-bold m-4">{{ doc.title }}</h1>  
           <div class="grid place-items-center">
-            <img :src="doc.coverImageUrl" class="rounded-xl h-40 lg:h-64 m-4"/>
+            <nuxt-img :src="doc.coverImageUrl" class="rounded-xl h-40 lg:h-64 m-4"/>
             <div class="grid place-items-center font-semibold lg:text-xl space-y-4">
               <p>{{ doc.description }}</p>  
               <p> Posted on: {{ doc.date }}</p>  

@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="grid place-items-center space-y-8 xl:flex xl:justify-around gap-6">
-            <img src="~/assets/About.jpg" alt="Picture of me" class="max-h-96 rounded-xl m-8">
+            <nuxt-img src="/About.jpg" alt="Picture of me" class="max-h-96 rounded-xl m-8"/>
             <p class="w-full bg-violet-500 text-stone-50 p-6 rounded-xl font-semibold leading-6 lg:leading-10 lg:text-lg lg:m-6">
             Hi! My name is Jonas. I am 23 years old. I was born and raised in Bonn and Troisdorf, Germany. 
             I have a Bachelor's degree in Biomedical Sciences and a Master's degree in Molecular Medicine.
