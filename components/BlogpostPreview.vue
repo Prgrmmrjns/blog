@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-side shadow-xl m-8 w-full md:w-1/2 lg:w-1/3 bg-lime-400 rounded-xl text-gray-700 font-semibold w-1/2">
+  <div class="card card-side shadow-xl m-8 md:w-1/2 lg:w-1/3 bg-lime-400 rounded-xl text-gray-700 font-semibold w-1/2">
     <div class="card-body w-1/2">
       <div class="grid place-items-center">
         <nuxt-img class="h-44 rounded-xl" :src="imgSource" />
