@@ -3,7 +3,6 @@ export default defineNuxtConfig({
     modules: [    
         '@nuxtjs/tailwindcss',
         '@nuxt/content',
-        '@nuxt/image-edge',
     ],
     components: {
         global: true,
