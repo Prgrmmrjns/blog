@@ -10,6 +10,7 @@
               <h1 >{{ doc.description }}</h1>  
               <h1> Posted on: {{ doc.date }}</h1>  
               <h1> Category: {{ doc.category }}</h1>  
+              <h1> Language: {{ doc.language }}</h1>  
             </div>
           </div>    
         </div>   
