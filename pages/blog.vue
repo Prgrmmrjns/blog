@@ -8,10 +8,10 @@
             </div>
         </div>
         <div class="grid place-items-center">
-            <BlogpostPreview  imgSource="/genetics.png" title="The wonderful world of gene regulation" description="Gene regulation is a complex biological mechanism that is responsible for 
+            <BlogpostPreview  imgSource="genetics.png" title="The wonderful world of gene regulation" description="Gene regulation is a complex biological mechanism that is responsible for 
             deciding which genes are transcribed. Cells have to react quickly to changes in homeostasis and this is achieved by an intricate dance of signaling proteins, 
             transcription factors and various other proteins." publishingDate="20.11.2022" category="Science" link="generegulation"/>
-            <BlogpostPreview imgSource="/stemcells.jpg" title="Stem cells - Cells with a lot of potential" description="I am passionate about stem cells. In this post I want to give you a little 
+            <BlogpostPreview imgSource="stemcells.jpg" title="Stem cells - Cells with a lot of potential" description="I am passionate about stem cells. In this post I want to give you a little 
             impression about the work with stem cells as well as into the newest breakthrough in stem cell research." publishingDate="20.11.2022" 
             category="Science" link="stemcells" />
         </div>
