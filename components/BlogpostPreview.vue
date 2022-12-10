@@ -19,14 +19,26 @@
 </template>
 
 <script>
-export default {
-props:  {
-  imgSource: String,
-  title: String,
-  description: String,
-  publishingDate: String,
-  category: String,
-  link: String
-}}
-
+export default{
+    props: {
+      imgSource: {
+      type: String,
+    },
+    title: {
+      type: String,
+    },
+    description: {
+      type: String,
+    },
+    publishingDate:{
+       type: String,
+    },
+    category: {
+      type: String,
+    },
+    link: {
+      type: String,
+    }
+  }
+}
 </script>
