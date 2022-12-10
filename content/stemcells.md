@@ -6,13 +6,13 @@ category: Science
 coverImageUrl: stemcells.jpg
 ---
 
-### Stem cells - Cells with a lot of potential
+<!-- Content of the page -->
 
 
 #### So what are stem cells?
 Imagine you grew up went to school and then learn a profession like a teacher, a lawyer or a haircutter. You are in this profession for years and you become an expert in your field. However you are already so old that you cannot start a new life and learn a new profession. And then, suddenly you get a drink that makes you a baby again. You have no expertise in whatsoever but while you were a teacher earlier you now strive to become a pilot. Wouldnt that be cool? While this seems very unlikely in real life scientists in the lab have actually discovered how to return cells of your body into such an early state from which the cells can reorientate into another cell type. Cells in this early state are called induced pluripotent stem cells (iPSCs). Normally, stem cells are pretty ordinary. You currently have billions of stem cells in your body. They function as a backup when cells of your body die and they fill up your tissues with new cells. However, they are either multipotent such as bone marrow stem cells who can produce all kinds of blood cells or they are unipotent meaning that they can only produce one specific cell type. In contrast, pluripotent stem cells are very special as they can differentiate into literally every cell type of your body. 
 
-<img src="ipsc.jpg" alt="drawing" width="900"/>
+<img src="https://static-01.hindawi.com/articles/sci/volume-2011/619583/figures/619583.fig.001a.jpg" alt="drawing"/>
 
 *Process of reprogramming somatic cells to iPSCs and further differentiation (Image from https://stemcellcongress.alliedacademies.com/2018/events-list/reprogramming-of-stem-cells)*
 
