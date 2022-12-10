@@ -4,7 +4,6 @@ description: 'Gene regulation is a complex biological mechanism that is responsi
 date: 20.11.2022
 category: Science
 coverImageUrl: genetics.png
-language: English
 ---
 
 <!-- Content of the page -->
