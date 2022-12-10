@@ -1,5 +1,5 @@
 <template>
-    <div class="grid place-items-center space-y-6 bg-lime-400 w-3/4 lg:w-1/4
+    <div class="grid place-items-center space-y-6 bg-lime-400 w-3/4 lg:w-1/4 p-4
     rounded-xl text-gray-600 font-semibold hover:text-stone-50">
         <p class="text-2xl font-semibold">{{projectName}}</p>
         <img :src="imageUrl" class="h-32 rounded-xl"/>
