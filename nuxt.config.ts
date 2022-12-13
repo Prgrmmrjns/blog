@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     modules: [    
         '@nuxtjs/tailwindcss',
         '@nuxt/content',
-        '@nuxtjs/supabase'
+        //'@nuxtjs/supabase'
     ],
     components: {
         global: true,
