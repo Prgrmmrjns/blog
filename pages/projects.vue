@@ -7,12 +7,12 @@
                 </div>
             </div>
         </div>
-        <div class="grid place-items-center space-y-8 lg:flex lg:space-x-12 lg:justify-around p-4">
-            <Card  projectName="Weather app" imageUrl="weather.webp" description = "A web application that can get the weather information of all cities around the world." 
+        <div class="grid place-items-center space-y-8 lg:flex lg:space-x-12 lg:justify-around">
+            <Card  class="mt-8" projectName="Weather app" imageUrl="weather.webp" description = "A web application that can get the weather information of all cities around the world." 
             link="https://globalweatherfinder.netlify.app"/>
             <Card  projectName="Chess game" imageUrl="chess.webp" description = "A chess UI where people can design their own chess AI and play against the ones of others." 
             link="To be published soon!"/>
-            <Card  projectName="Job search web scraper" imageUrl="jobs.jpg" description = "This app will send you an automatic message when your dream job is listed." 
+            <Card  projectName="Job search web scraper" imageUrl="https://images.pexels.com/photos/5598295/pexels-photo-5598295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" description = "This app will send you an automatic message when your dream job is listed." 
             link="To be published soon!"/>
         </div>
         <div class="flex justify-between space-x-16 max-w-5xl bg-violet-500 text-stone-50 p-8 rounded-xl font-semibold leading-10 text-lg m-8">
