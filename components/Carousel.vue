@@ -3,7 +3,7 @@
         <!-- Slide 1 About -->
         <div id="slide1" class="carousel-item relative w-full h-96 place-content-center">
             <div class="grid place-items-center lg:flex lg:justify-around space-y-4 bg-gray-800 p-6 pl-12 pr-12 rounded-xl items-center">
-                <nuxt-img src= "/About.jpg" class="h-40 lg:h-80 rounded-xl"/>
+                <nuxt-img src= "About.jpg" class="h-40 lg:h-80 rounded-xl"/>
                 <p class="h-40 bg-violet-500 p-4 rounded-xl text-stone-50 font-black lg:text-2xl lg:w-1/3">
                     Learn more about me and my skills and interests on my <NuxtLink to=/about class="text-lime-400 hover:text-gray-800">About</NuxtLink> page.
                 </p>
