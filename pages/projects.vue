@@ -14,8 +14,8 @@
                 link="https://globalweatherfinder.netlify.app"/>
             <Card  
                 projectName="Chess game" 
-                imageUrl="https://images.pexels.com/photos/1762815/pexels-photo-1762815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" description = "A chess UI where people can design their own chess AI and play against the ones of others." 
-                link="To be published soon!"/>
+                imageUrl="chess.png" description = "A chess game where people can play against a chess AI or against each other." 
+                link="https://github.com/Prgrmmrjns/chess"/>
             <Card  
                 projectName="Job search web scraper" 
                 imageUrl="https://images.pexels.com/photos/5598295/pexels-photo-5598295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" description = "This app will send you an automatic message when your dream job is listed." 
