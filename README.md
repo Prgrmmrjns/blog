@@ -1,42 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Welcome to the website of my Blog Github page!
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Change log
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* 10.01.23
+    * Add three new project overviews
+    * Change slug page to not show comments section as they are not possible in the moment
+    * Change description and title of first blog entry. Leave text blank for now.

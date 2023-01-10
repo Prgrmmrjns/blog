@@ -8,12 +8,12 @@
             </div>
         </div>
         <div class="grid place-items-center">
-            <BlogpostPreview  imgSource="genetics.png" title="The wonderful world of gene regulation" description="Gene regulation is a complex biological mechanism that is responsible for 
-            deciding which genes are transcribed. Cells have to react quickly to changes in homeostasis and this is achieved by an intricate dance of signaling proteins, 
-            transcription factors and various other proteins." publishingDate="20.11.2022" category="Science" link="generegulation"/>
-            <BlogpostPreview imgSource="stemcells.jpg" title="Stem cells - Cells with a lot of potential" description="I am passionate about stem cells. In this post I want to give you a little 
-            impression about the work with stem cells as well as into the newest breakthrough in stem cell research." publishingDate="20.11.2022" 
-            category="Science" link="stemcells" />
+            <BlogpostPreview imgSource='genetics.png' title='Gene expression prediction based on histone modification data using particle swarm optimization and XGBoost.' description='As part of my master thesis I created the Bioinformatics tool PatternChrome for the prediction of gene expression.
+            Predicting gene expression is useful as it may allow the diagnosis of diseases or medical conditions. In addition, PatternChrome
+            allows the characterization of the epigenetic profile of a sample, e.g. a primary tissue. The introduced tool is a Machine Learning
+            model that uses the particle swarm optimization method to extract relevant epigenetic features and uses XGBoost for subsequent 
+            gene expression level classification.' publishingDate="To be published soon." 
+            category="Science" link="geneexpression" />
         </div>
     </div>
 </template>
