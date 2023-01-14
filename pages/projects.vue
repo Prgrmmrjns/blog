@@ -9,31 +9,31 @@
         </div>
         <div class="grid place-items-center grid-cols-3 space-y-8 lg:space-x-6">
             <Card  class="mt-8" 
-                projectName="Weather app" 
+                projectName="Weather App" 
                 imageUrl="https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                 description = "A web application that can get the weather information of all cities around the world." 
                 link="https://globalweatherfinder.netlify.app"/>
             <Card  
-                projectName="Chess game" 
+                projectName="ChessGame" 
                 imageUrl="chess.png" 
                 description = "A chess game where people can play against a chess AI or against each other." 
                 link="https://github.com/Prgrmmrjns/chess"/>
             <Card  
-                projectName="Job search web scraper" 
+                projectName="Stepstone Job Finder" 
                 imageUrl="https://images.pexels.com/photos/5598295/pexels-photo-5598295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                description = "This app will send you an automatic message when your dream job is listed." 
-                link="To be published soon!"/>
+                description = "This app lets you determine advanced parameters to find your dream job." 
+                link="https://github.com/Prgrmmrjns/Stepstone-Job-finder"/>
             <Card  
-                projectName="Gene expression predictor" 
+                projectName="Gene Expression Predictor" 
                 imageUrl="genetics.png" description = "This is the product of my master thesis. This Bioinformatics tool can predict gene expression based on the epigenetic profile." 
                 link="To be published soon!"/>
             <Card  
-                projectName="Calory estimator" 
+                projectName="Calory Estimator" 
                 imageUrl="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                 description = "Upload your meal as an image to get an estimation of the calories contained in your meal." 
                 link="To be published soon!"/>
             <Card  
-                projectName="Fitbit Health tracker" 
+                projectName="Fitbit Health Tracker" 
                 imageUrl="https://images.pexels.com/photos/1682821/pexels-photo-1682821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                 description = "Get an overview of your health data and receive lifestyle suggestions." 
                 link="To be published soon!"/>
