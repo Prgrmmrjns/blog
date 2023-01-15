@@ -7,7 +7,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid place-items-center grid-cols-1 space-y-8 lg:grid-cols-3 lg:space-x-6">
+        <div class="grid place-items-center grid-cols-1 space-y-8 lg:grid-cols-2 lg:space-x-6 xl:grid-cols-3">
             <Card  class="mt-8" 
                 projectName="Weather App" 
                 imageUrl="https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
