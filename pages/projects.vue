@@ -25,8 +25,8 @@
                 link="https://github.com/Prgrmmrjns/Stepstone-Job-finder"/>
             <Card  
                 projectName="Gene Expression Predictor" 
-                imageUrl="genetics.png" description = "This is the product of my master thesis. This Bioinformatics tool can predict gene expression based on the epigenetic profile." 
-                link="To be published soon!"/>
+                imageUrl="PatternChrome.png" description = "This Bioinformatics tool can predict gene expression based on the epigenetic profile of a cell." 
+                link="https://github.com/Prgrmmrjns/PatternChromeDashboard"/>
             <Card  
                 projectName="Calory Estimator" 
                 imageUrl="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
