@@ -5,7 +5,7 @@
                 <h1 class="text-stone-50 text-2xl font-semibold uppercase bg-gray-800 p-8 rounded-xl">About me!</h1>
             </div>
         </div>
-        <div class="grid place-items-center space-y-8 xl:flex xl:justify-around gap-6">
+        <div class="grid place-items-center space-y-8 xl:flex xl:justify-around">
             <img src="~/assets/About.jpg" alt="Picture of me" class="max-h-96 rounded-xl m-8"/>
             <p class="w-full bg-violet-500 text-stone-50 p-6 rounded-xl font-semibold leading-6 lg:leading-10 lg:text-lg lg:m-6">
             Hi! My name is Jonas. I am 23 years old. I was born and raised in Bonn and Troisdorf, Germany. 
