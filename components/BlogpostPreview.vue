@@ -7,7 +7,8 @@
       <h2 class="card-title">{{title}}</h2>
       <p>{{description}}</p>
       <p>Published on {{publishingDate}}</p>
-      <p>Category: <Tag name = 'Science'/></p>
+      <p>Category: {{category}}</p>
+      <p>Author: {{author}}</p>
       <div class="card-actions justify-end">
           <div class="bg-violet-500 text-stone-50 text-xl m-4 font-extrabold w-28 h-12 rounded-xl grid place-items-center 
           hover:text-gray-800 hover:bg-indigo-100">
@@ -33,6 +34,9 @@ export default{
     },
     publishingDate:{
        type: String,
+    },
+    author: {
+      type: String,
     },
     category: {
       type: String,
