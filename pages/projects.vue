@@ -28,10 +28,10 @@
                 imageUrl="PatternChrome.png" description = "This Bioinformatics tool can predict gene expression based on the epigenetic profile of a cell." 
                 link="https://jonas-wolber.shinyapps.io/PatternChromeDashboard/"/>
             <Card  
-                projectName="Calory Estimator" 
+                projectName="DeepFood" 
                 imageUrl="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                description = "Upload your meal as an image to get an estimation of the calories contained in your meal." 
-                link="To be published soon!"/>
+                description = "Upload your meal as an image to get information about your meal." 
+                link="https://prgrmmrjns-deepfood-streamlit-app-h7tlgr.streamlit.app/"/>
             <Card  
                 projectName="Fitbit Health Tracker" 
                 imageUrl="https://images.pexels.com/photos/1682821/pexels-photo-1682821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
