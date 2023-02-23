@@ -14,7 +14,7 @@
                 description = "A web application that can get the weather information of all cities around the world." 
                 link="https://globalweatherfinder.netlify.app"/>
             <Card  
-                projectName="ChessGame" 
+                projectName="Chess Game" 
                 imageUrl="chess.png" 
                 description = "A chess game where people can play against a chess AI or against each other." 
                 link="https://github.com/Prgrmmrjns/chess"/>
@@ -38,14 +38,14 @@
                 description = "Get an overview of your health data and receive lifestyle suggestions." 
                 link="To be published soon!"/>
             <Card  
-                projectName="ChatGPT Code assistance" 
+                projectName="Stock News Alerter" 
                 imageUrl="https://cdn.midjourney.com/e6037a40-c106-49cd-ae43-a2bbaa88dc34/grid_0.png" 
-                description = "AI has finally come to replace programmers! Let ChatpGPT write the next application for you." 
+                description = "Get trading suggestions using Natural Language Processing. Use at your own risk!" 
                 link="To be published soon!"/>
             <Card  
-                projectName="Telegram Notion Bot " 
-                imageUrl="https://www.notion.so/front-static/external/readme/images/api-hanging@2x.png" 
-                description = "This app connects a Telegram Chatbot with your Notion API allowing you to quickly store new data on your Notion site." 
+                projectName="Telegram ChatGPT Bot " 
+                imageUrl="https://logos-world.net/wp-content/uploads/2021/03/Telegram-Logo.png" 
+                description = "This app connects a Telegram Chatbot with your ChatGPT account allowing you to quickly interact with ChatGPT via Telegram." 
                 link="To be published soon!"/>
         </div>
         <div class="flex justify-between space-x-4 max-w-5xl place-items-center bg-violet-500 text-stone-50 p-6 rounded-xl font-semibold leading-10 m-8">
