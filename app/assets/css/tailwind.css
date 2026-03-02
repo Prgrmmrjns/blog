@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f5f3eb] text-gray-900 font-body transition-colors duration-200;
+  }
+  html.dark body {
+    @apply bg-[#0e0e0e] text-cream;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
