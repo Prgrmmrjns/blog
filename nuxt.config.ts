@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxt/content", "@nuxtjs/supabase"],
+  content: {
+    experimental: { sqliteConnector: "native" },
+  },
   supabase: {
     redirect: false,
   },

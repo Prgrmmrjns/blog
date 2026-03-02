@@ -2,6 +2,9 @@
   "name": "recipes-blog",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,7 +18,6 @@
     "@nuxtjs/supabase": "^2.0.4",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
-    "better-sqlite3": "^12.6.2",
     "nuxt": "^4.3.1",
     "zod": "^4.3.6"
   },

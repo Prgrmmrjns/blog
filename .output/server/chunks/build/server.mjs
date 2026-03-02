@@ -12,7 +12,6 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
-import 'better-sqlite3';
 import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
 import 'devalue';
@@ -422,27 +421,27 @@ const _routes = [
   {
     name: "about",
     path: "/about",
-    component: () => import('./about-gAvJSKJp.mjs')
+    component: () => import('./about-Cr7M5Ykr.mjs')
   },
   {
     name: "index",
     path: "/",
-    component: () => import('./index-DB6xdqs3.mjs')
+    component: () => import('./index-CixlXPQz.mjs')
   },
   {
     name: "contact",
     path: "/contact",
-    component: () => import('./contact-D49DmilL.mjs')
+    component: () => import('./contact-UkoGdkZD.mjs')
   },
   {
     name: "blog",
     path: "/blog",
-    component: () => import('./index-B4Ar77DK.mjs')
+    component: () => import('./index-CwPjHnwH.mjs')
   },
   {
     name: "blog-slug",
     path: "/blog/:slug()",
-    component: () => import('./_slug_-DnM2i0yG.mjs')
+    component: () => import('./_slug_-Bp6vMUOJ.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -932,18 +931,18 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyProseA = defineAsyncComponent(() => import('./ProseA-DjSKhJNL.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseA = defineAsyncComponent(() => import('./ProseA-HDvgzprR.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-CmM4tvAH.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-BF9YfA4g.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-CJxLJ2i1.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-BTQvT1hu.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-C5hEWZHl.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-OLC2cuZg.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-Chm5bDJS.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-CCsfclN1.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-C62vkiYU.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-Bcls8p4A.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-B-8mtMAj.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-4Ly9c2fp.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-BSioVNfr.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-D7wg-ppi.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-BLOlNVQz.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-2ot5LDvL.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-BtRpeQAY.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-BGU8SZ8n.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-1YNZdAGc.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CR5FAQVi.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseP = defineAsyncComponent(() => import('./ProseP-7x1K7e3A.mjs').then((r) => r["default"] || r.default || r));
@@ -1328,7 +1327,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<div class="flex items-center gap-6"><!--[-->`);
+      _push(`<div class="flex items-center gap-8"><!--[-->`);
       ssrRenderList(links, (link) => {
         _push(ssrRenderComponent(_component_NuxtLink, {
           key: link.to,
@@ -1349,7 +1348,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
           _: 2
         }, _parent));
       });
-      _push(`<!--]--><button type="button" aria-label="Toggle dark mode" class="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-200 hover:text-gray-900 dark:text-cream/70 dark:hover:bg-white/10 dark:hover:text-cream">`);
+      _push(`<!--]--><div class="h-5 w-px bg-gray-300 dark:bg-white/20" aria-hidden="true"></div><button type="button" aria-label="Toggle dark mode" class="-m-2 rounded-lg p-2.5 text-gray-600 transition-colors hover:bg-gray-200 hover:text-gray-900 dark:text-cream/70 dark:hover:bg-white/10 dark:hover:text-cream">`);
       if (unref(isDark)) {
         _push(`<span class="text-lg">☀️</span>`);
       } else {
@@ -1492,8 +1491,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-DpWvuvaR.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-BMrEkaSm.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-BkXkI-id.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-D0J43H0J.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
