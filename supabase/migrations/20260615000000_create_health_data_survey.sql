@@ -1,0 +1,2 @@
+-- Superseded by 20260615100000_unify_blog_surveys.sql
+-- Kept for migration history; do not run on new projects.

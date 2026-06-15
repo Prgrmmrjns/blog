@@ -291,3 +291,8 @@ print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
 ## Conclusion
 
 Each of these gradient boosting frameworks has its strengths and is suited for different scenarios. Ultimately, the best approach is to experiment with all three on your specific dataset and choose the one that best meets your performance, speed, and resource constraints. Don't be afraid to reach out to the ML community (or AI tools) to improve your model.
+
+## What's your go-to model?
+
+::BlogSurveyMlModel
+::

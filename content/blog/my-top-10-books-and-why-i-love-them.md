@@ -155,3 +155,8 @@ The book also highlights something I've come to value deeply in my own work: the
 Perhaps what impressed me most about the book was how effectively it explains complex genetic concepts to non-specialists. The authors use clear analogies and brilliant visual representations to make CRISPR-Cas9 understandable without oversimplifying. The illustrations depicting how this molecular machinery works were particularly helpful—I still find myself thinking in terms of these visual models when explaining gene editing to others.
 
 Reading *A Crack in Creation* during my studies didn't just teach me about a revolutionary technology; it showed me what kind of researcher I wanted to become—one who combines scientific rigor with ethical consideration and collaborative spirit. Years later, I still recommend this book to anyone interested in understanding not just how CRISPR works, but how transformative scientific discoveries actually happen.
+
+## What's your favorite genre?
+
+::BlogSurveyGenre
+::

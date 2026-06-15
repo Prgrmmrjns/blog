@@ -7,20 +7,27 @@ const { data: posts } = await useAsyncData("posts-list", () =>
 <template>
   <div class="min-h-screen bg-[#f5f3eb] dark:bg-[#0e0e0e]">
     <!-- Header -->
-    <header class="relative overflow-hidden py-24 px-6 text-center">
+    <header class="relative overflow-hidden px-6 pb-16 pt-12 lg:pb-20 lg:pt-16">
       <div class="absolute inset-0 bg-gradient-to-b from-teal/10 via-transparent to-transparent" />
-      <div class="relative z-10 mx-auto max-w-3xl">
-        <p class="mb-4 text-sm font-medium tracking-[0.3em] uppercase text-teal dark:text-mint">
-          Science · AI · Programming · Medicine · Health & Fitness
-        </p>
-        <h1 class="text-5xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-cream sm:text-7xl">
-          Jonas Wolber
-        </h1>
-        <p class="mt-6 text-lg font-light leading-relaxed text-gray-600 dark:text-cream/60">
-          Curiosity is all you need.<br />
-          Doctoral student in Computational Biomedicine · RWTH Aachen
-        </p>
-        <div class="mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div class="absolute -right-20 top-10 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+      <div class="absolute -left-16 bottom-0 h-48 w-48 rounded-full bg-teal/10 blur-3xl" />
+
+      <div class="relative z-10 mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-12">
+        <div class="text-center lg:text-left">
+          <p class="mb-4 text-sm font-medium tracking-[0.3em] uppercase text-teal dark:text-mint">
+            Science · AI · Programming · Medicine · Health & Fitness
+          </p>
+          <h1 class="text-5xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-cream sm:text-6xl lg:text-7xl">
+            Jonas Wolber
+          </h1>
+          <p class="mt-6 text-lg font-light leading-relaxed text-gray-600 dark:text-cream/60">
+            Curiosity is all you need.<br />
+            Doctoral student in Computational Biomedicine · RWTH Aachen
+          </p>
+          <div class="mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent lg:mx-0" />
+        </div>
+
+        <CoffeeLaptopHero />
       </div>
     </header>
 
