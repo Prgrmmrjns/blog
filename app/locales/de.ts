@@ -30,6 +30,7 @@ export default {
     postNotFound: "Beitrag nicht gefunden",
     filterAll: "Alle",
     filterByTopic: "Nach Thema filtern",
+    loadingPosts: "Beiträge werden geladen…",
     noPostsForTopic: "Keine Beiträge zu diesem Thema.",
   },
   about: {

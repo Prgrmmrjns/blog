@@ -1,15 +1,6 @@
 <script setup lang="ts">
-const { t, locale } = useLocale();
-const { listPosts } = useBlogPosts();
-
-const { data: posts } = await useAsyncData(
-  () => `blog-posts-${locale.value}`,
-  () => listPosts(),
-  { watch: [locale] },
-);
-
-const postsRef = computed(() => posts.value);
-const { selectedTopic, allTopics, filteredPosts } = usePostTopicFilter(postsRef);
+const { t } = useLocale();
+const { pending, selectedTopic, allTopics, filteredPosts } = await useBlogPostList("blog-posts");
 
 useHead(() => ({
   title: `Blog — Jonas Wolber`,
@@ -31,7 +22,13 @@ useHead(() => ({
     <main class="mx-auto max-w-7xl px-6 pb-32">
       <BlogTopicFilter v-model="selectedTopic" :topics="allTopics" />
 
-      <div v-if="filteredPosts.length > 0" class="grid gap-10 sm:grid-cols-2">
+      <p
+        v-if="pending"
+        class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50"
+      >
+        {{ t("blog.loadingPosts") }}
+      </p>
+      <div v-else-if="filteredPosts.length > 0" class="grid gap-10 sm:grid-cols-2">
         <BlogCard
           v-for="post in filteredPosts"
           :key="post.path"

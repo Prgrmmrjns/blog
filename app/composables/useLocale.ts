@@ -19,7 +19,12 @@ function resolvePath(obj: Record<string, unknown>, path: string): string | undef
 }
 
 export function useLocale() {
-  const locale = useState<Locale>("locale", () => "en");
+  const localeCookie = useCookie<Locale>("locale", {
+    default: () => "en",
+    maxAge: 60 * 60 * 24 * 365,
+  });
+
+  const locale = useState<Locale>("locale", () => (localeCookie.value === "de" ? "de" : "en"));
 
   const messages = computed<Catalog>(() => catalogs[locale.value]);
 
@@ -39,19 +44,24 @@ export function useLocale() {
 
   function setLocale(next: Locale) {
     locale.value = next;
+    localeCookie.value = next;
     if (import.meta.client) {
-      localStorage.setItem("locale", next);
       document.documentElement.lang = next;
     }
   }
 
-  onMounted(() => {
-    const stored = localStorage.getItem("locale") as Locale | null;
-    if (stored === "en" || stored === "de") {
-      locale.value = stored;
-    }
-    document.documentElement.lang = locale.value;
-  });
+  watch(
+    locale,
+    (next) => {
+      if (localeCookie.value !== next) {
+        localeCookie.value = next;
+      }
+      if (import.meta.client) {
+        document.documentElement.lang = next;
+      }
+    },
+    { immediate: true },
+  );
 
   return { locale, setLocale, t, tm, messages };
 }

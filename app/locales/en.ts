@@ -37,6 +37,7 @@ export default {
     postNotFound: "Post not found",
     filterAll: "All",
     filterByTopic: "Filter by topic",
+    loadingPosts: "Loading posts…",
     noPostsForTopic: "No posts match this topic yet.",
   },
   about: {
