@@ -10,7 +10,7 @@ topics:
   - gradient-boosting
 tags:
   - Machine Learning
-  - KI
+  - AI
   - Gradient Boosting
 ---
 

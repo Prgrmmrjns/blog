@@ -13,8 +13,8 @@ topics:
 tags:
   - Machine Learning
   - Diabetes
-  - Gesundheit
-  - Forschung
+  - Health
+  - Research
   - LLMs
 ---
 

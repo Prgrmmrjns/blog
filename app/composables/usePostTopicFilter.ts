@@ -1,11 +1,10 @@
-import { getPostTopics, translateTopic, type TopicKey } from "~/utils/blogTopics";
+import { getPostTopics, topicLabel, type TopicKey } from "~/utils/blogTopics";
 
 export type TopicOption = { key: TopicKey; label: string };
 
 export function usePostTopicFilter<T extends { topics?: string[]; tags?: string[] }>(
   posts: Ref<T[] | null | undefined>,
 ) {
-  const { locale } = useLocale();
   const selectedTopic = ref<TopicKey | null>(null);
 
   const allTopics = computed<TopicOption[]>(() => {
@@ -16,18 +15,14 @@ export function usePostTopicFilter<T extends { topics?: string[]; tags?: string[
       }
     }
     return [...keys]
-      .sort((a, b) => translateTopic(a, locale.value).localeCompare(translateTopic(b, locale.value)))
-      .map((key) => ({ key, label: translateTopic(key, locale.value) }));
+      .sort((a, b) => topicLabel(a).localeCompare(topicLabel(b)))
+      .map((key) => ({ key, label: topicLabel(key) }));
   });
 
   const filteredPosts = computed(() => {
     const list = posts.value ?? [];
     if (!selectedTopic.value) return list;
     return list.filter((post) => getPostTopics(post).includes(selectedTopic.value!));
-  });
-
-  watch(locale, () => {
-    selectedTopic.value = null;
   });
 
   return { selectedTopic, allTopics, filteredPosts };

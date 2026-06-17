@@ -9,9 +9,9 @@ topics:
   - personal
   - science
 tags:
-  - Bücher
-  - Persönlich
-  - Wissenschaft
+  - Books
+  - Personal
+  - Science
 ---
 
 ## Warum ich gerne lese

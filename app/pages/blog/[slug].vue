@@ -12,7 +12,7 @@ const { data: post } = await useAsyncData(
 
 const topicLabels = computed(() => {
   if (!post.value) return [];
-  return getPostTopics(post.value).map((key) => translateTopic(key, locale.value));
+  return getPostTopics(post.value).map((key) => topicLabel(key));
 });
 
 if (!post.value) {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getPostTopics, translateTopic } from "~/utils/blogTopics";
+import { getPostTopics, topicLabel } from "~/utils/blogTopics";
 
 const props = defineProps<{
   title: string;
@@ -11,10 +11,8 @@ const props = defineProps<{
   to: string;
 }>();
 
-const { locale } = useLocale();
-
 const topicLabels = computed(() =>
-  getPostTopics(props).slice(0, 2).map((key) => translateTopic(key, locale.value)),
+  getPostTopics(props).slice(0, 2).map((key) => topicLabel(key)),
 );
 </script>
 
