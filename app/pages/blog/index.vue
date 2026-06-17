@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useLocale();
-const { pending, selectedTopic, allTopics, filteredPosts } = await useBlogPostList("blog-posts");
+const { pending, selectedTopic, allTopics, filteredPosts } = useBlogPostList("blog-posts");
 
 useHead(() => ({
   title: `Blog — Jonas Wolber`,

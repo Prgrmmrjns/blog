@@ -1,8 +1,8 @@
-export async function useBlogPostList(cacheKey: string) {
+export function useBlogPostList(cacheKey: string) {
   const { locale } = useLocale();
   const { listPosts } = useBlogPosts();
 
-  const { data: posts, pending } = await useAsyncData(
+  const { data: posts, pending } = useAsyncData(
     cacheKey,
     () => listPosts(),
     { watch: [locale] },

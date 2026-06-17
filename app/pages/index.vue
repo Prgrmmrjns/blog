@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useLocale();
-const { pending, selectedTopic, allTopics, filteredPosts } = await useBlogPostList("home-posts");
+const { pending, selectedTopic, allTopics, filteredPosts } = useBlogPostList("home-posts");
 </script>
 
 <template>
