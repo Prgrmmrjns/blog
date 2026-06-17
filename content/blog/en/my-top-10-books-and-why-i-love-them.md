@@ -1,12 +1,13 @@
 ---
 title: My Top 10 Books and Why I Love Them
 excerpt: A personal list of books that shaped how I think about science, life, and the world.
-date: "2024-10-22"
+date: "2026-03-22"
+locale: en
+slug: my-top-10-books-and-why-i-love-them
 tags:
   - Books
   - Personal
   - Science
-image: https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&q=80
 ---
 
 ## Why I love reading

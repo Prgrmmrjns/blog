@@ -4,16 +4,17 @@ import { z } from "zod";
 const postSchema = z.object({
   title: z.string(),
   excerpt: z.string(),
-  image: z.string().optional(),
   date: z.string(),
   tags: z.array(z.string()).default([]),
+  locale: z.enum(["en", "de"]),
+  slug: z.string(),
 });
 
 export default defineContentConfig({
   collections: {
     posts: defineCollection({
       type: "page",
-      source: "blog/*.md",
+      source: "blog/**/*.md",
       schema: postSchema,
     }),
   },

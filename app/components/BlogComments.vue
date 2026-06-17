@@ -3,6 +3,7 @@ const props = defineProps<{
   postSlug: string;
 }>();
 
+const { t, locale } = useLocale();
 const supabase = useSupabaseClient();
 
 const comments = ref<{ id: string; author_name: string | null; content: string; created_at: string }[]>([]);
@@ -27,7 +28,7 @@ async function fetchComments() {
     if (err) throw err;
     comments.value = data ?? [];
   } catch (e) {
-    error.value = e instanceof Error ? e.message : "Failed to load comments";
+    error.value = e instanceof Error ? e.message : t("comments.loadError");
   } finally {
     loading.value = false;
   }
@@ -52,14 +53,14 @@ async function submitComment() {
     commentContent.value = "";
     await fetchComments();
   } catch (e) {
-    submitError.value = e instanceof Error ? e.message : "Failed to post comment";
+    submitError.value = e instanceof Error ? e.message : t("comments.submitError");
   } finally {
     submitting.value = false;
   }
 }
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString(undefined, {
+  return new Date(iso).toLocaleDateString(locale.value === "de" ? "de-DE" : "en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -74,7 +75,7 @@ onMounted(fetchComments);
 <template>
   <section class="mt-16 border-t border-gray-200 pt-16 dark:border-white/10">
     <h2 class="mb-6 text-2xl font-bold text-gold">
-      Comments
+      {{ t("comments.title") }}
     </h2>
 
     <!-- Comment form -->
@@ -82,26 +83,26 @@ onMounted(fetchComments);
       <div class="space-y-6">
         <div>
           <label for="author-name" class="mb-2 block text-sm font-medium text-gray-700 dark:text-cream/70">
-            Name (optional)
+            {{ t("comments.nameLabel") }}
           </label>
           <input
             id="author-name"
             v-model="authorName"
             type="text"
-            placeholder="Your name"
+            :placeholder="t('comments.namePlaceholder')"
             class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30 dark:border-white/20 dark:bg-[#1a1a1a] dark:text-cream dark:placeholder-cream/40 dark:focus:border-mint/50 dark:focus:ring-mint/30"
           />
         </div>
         <div>
           <label for="comment-content" class="mb-2 block text-sm font-medium text-gray-700 dark:text-cream/70">
-            Comment *
+            {{ t("comments.commentLabel") }}
           </label>
           <textarea
             id="comment-content"
             v-model="commentContent"
             rows="5"
             required
-            placeholder="Write a comment..."
+            :placeholder="t('comments.commentPlaceholder')"
             class="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30 dark:border-white/20 dark:bg-[#1a1a1a] dark:text-cream dark:placeholder-cream/40 dark:focus:border-mint/50 dark:focus:ring-mint/30"
           />
         </div>
@@ -113,20 +114,20 @@ onMounted(fetchComments);
           :disabled="submitting || !commentContent.trim()"
           class="rounded-xl bg-teal/20 px-6 py-3 text-base font-semibold text-teal transition-colors hover:bg-teal/30 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-mint/20 dark:text-mint dark:hover:bg-mint/30"
         >
-          {{ submitting ? "Posting..." : "Post comment" }}
+          {{ submitting ? t("comments.posting") : t("comments.post") }}
         </button>
       </div>
     </form>
 
     <!-- Comments list -->
     <div v-if="loading" class="text-gray-500 dark:text-cream/50">
-      Loading comments...
+      {{ t("comments.loading") }}
     </div>
     <p v-else-if="error" class="text-red-400">
       {{ error }}
     </p>
     <div v-else-if="comments.length === 0" class="rounded-2xl border border-gray-200 bg-gray-50 px-12 py-16 text-center text-base text-gray-600 dark:border-white/10 dark:bg-[#161616]/50 dark:text-cream/50">
-      No comments yet. Be the first to comment!
+      {{ t("comments.empty") }}
     </div>
     <ul v-else class="space-y-8">
       <li
@@ -140,7 +141,7 @@ onMounted(fetchComments);
           </div>
           <div class="flex flex-col gap-1">
             <span class="text-base font-semibold text-gray-900 dark:text-cream">
-              {{ c.author_name || "Anonymous" }}
+              {{ c.author_name || t("comments.anonymous") }}
             </span>
             <span class="text-sm text-gray-500 dark:text-cream/40">
               {{ formatDate(c.created_at) }}

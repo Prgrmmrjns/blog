@@ -1,12 +1,16 @@
 export function useTheme() {
   const isDark = useState<boolean>("theme-dark", () => true);
 
-  function toggle() {
-    isDark.value = !isDark.value;
-    applyTheme(isDark.value);
+  function setTheme(dark: boolean) {
+    isDark.value = dark;
+    applyTheme(dark);
     if (import.meta.client) {
-      localStorage.setItem("theme", isDark.value ? "dark" : "light");
+      localStorage.setItem("theme", dark ? "dark" : "light");
     }
+  }
+
+  function toggle() {
+    setTheme(!isDark.value);
   }
 
   function applyTheme(dark: boolean) {
@@ -33,5 +37,5 @@ export function useTheme() {
     applyTheme(isDark.value);
   });
 
-  return { isDark, toggle };
+  return { isDark, toggle, setTheme };
 }

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useLocale();
 const reducedMotion = ref(false);
 const isSpilling = ref(false);
 let spillTimer: ReturnType<typeof setTimeout> | null = null;
@@ -194,10 +195,10 @@ function handleCupClick() {
       </g>
 
       <text x="240" y="305" text-anchor="middle" class="caption-hint fill-gray-500 dark:fill-cream/40" font-size="11" font-style="italic">
-        hover the cup ☕
+        {{ t("heroes.coffeeHint") }}
       </text>
       <text x="240" y="305" text-anchor="middle" class="caption-text fill-gray-500 dark:fill-cream/40" font-size="11" font-style="italic">
-        research happens
+        {{ t("heroes.coffeeActive") }}
       </text>
     </svg>
   </div>

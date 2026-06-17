@@ -2,13 +2,14 @@
 title: "Forecasting Blood Sugar: When AI Reads Your Lunch Plate"
 excerpt: "In my latest paper, we combine language models, mechanistic metabolism models, and machine learning to predict glucose in type 1 diabetes — without painstaking food diaries."
 date: "2026-06-15"
+locale: en
+slug: health-monitoring-and-ml-in-diabetes-research
 tags:
   - Machine Learning
   - Diabetes
   - Health
   - Research
   - LLMs
-image: https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80
 ---
 
 In type 1 diabetes, blood glucose can swing sharply within minutes — and every body responds differently. Continuous glucose monitors and smart insulin pumps now deliver precise real-time data. What is often missing is the decisive piece of context: reliable information about *what* someone ate, and when.
