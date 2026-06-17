@@ -4,6 +4,12 @@ excerpt: "In meiner neuesten Arbeit kombinieren wir Sprachmodelle, mechanistisch
 date: "2026-06-15"
 locale: de
 slug: health-monitoring-and-ml-in-diabetes-research
+topics:
+  - machine-learning
+  - diabetes
+  - health
+  - research
+  - llms
 tags:
   - Machine Learning
   - Diabetes

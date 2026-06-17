@@ -10,6 +10,11 @@ const { data: post } = await useAsyncData(
   { watch: [locale] },
 );
 
+const topicLabels = computed(() => {
+  if (!post.value) return [];
+  return getPostTopics(post.value).map((key) => translateTopic(key, locale.value));
+});
+
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: t("blog.postNotFound") });
 }
@@ -41,11 +46,11 @@ useHead(() => ({
         <div class="mt-4 flex flex-wrap items-center gap-4 text-gray-600 dark:text-cream/60">
           <span>{{ post.date }}</span>
           <span
-            v-for="tag in post.tags ?? []"
-            :key="tag"
+            v-for="label in topicLabels"
+            :key="label"
             class="rounded-full bg-gold/20 px-2.5 py-1 text-xs font-semibold text-gold"
           >
-            {{ tag }}
+            {{ label }}
           </span>
         </div>
       </div>

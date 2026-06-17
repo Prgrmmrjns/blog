@@ -4,6 +4,10 @@ excerpt: Eine persönliche Liste von Büchern, die mein Denken über Wissenschaf
 date: "2026-03-22"
 locale: de
 slug: my-top-10-books-and-why-i-love-them
+topics:
+  - books
+  - personal
+  - science
 tags:
   - Bücher
   - Persönlich

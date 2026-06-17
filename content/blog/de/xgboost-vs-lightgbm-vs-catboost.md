@@ -4,6 +4,10 @@ excerpt: Wie Gradient Boosting funktioniert, was XGBoost, LightGBM und CatBoost 
 date: "2026-06-17"
 locale: de
 slug: xgboost-vs-lightgbm-vs-catboost
+topics:
+  - machine-learning
+  - ai
+  - gradient-boosting
 tags:
   - Machine Learning
   - KI

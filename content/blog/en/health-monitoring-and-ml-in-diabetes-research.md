@@ -4,6 +4,12 @@ excerpt: "In my latest paper, we combine language models, mechanistic metabolism
 date: "2026-06-15"
 locale: en
 slug: health-monitoring-and-ml-in-diabetes-research
+topics:
+  - machine-learning
+  - diabetes
+  - health
+  - research
+  - llms
 tags:
   - Machine Learning
   - Diabetes

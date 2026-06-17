@@ -6,6 +6,7 @@ const postSchema = z.object({
   excerpt: z.string(),
   date: z.string(),
   tags: z.array(z.string()).default([]),
+  topics: z.array(z.string()).default([]),
   locale: z.enum(["en", "de"]),
   slug: z.string(),
 });

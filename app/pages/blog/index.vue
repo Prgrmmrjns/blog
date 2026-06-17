@@ -11,10 +11,6 @@ const { data: posts } = await useAsyncData(
 const postsRef = computed(() => posts.value);
 const { selectedTopic, allTopics, filteredPosts } = usePostTopicFilter(postsRef);
 
-watch(locale, () => {
-  selectedTopic.value = null;
-});
-
 useHead(() => ({
   title: `Blog — Jonas Wolber`,
   meta: [{ name: "description", content: t("blog.metaDescription") }],
@@ -44,6 +40,7 @@ useHead(() => ({
           :title="post.title"
           :excerpt="post.excerpt"
           :date="post.date"
+          :topics="post.topics"
           :tags="post.tags"
         />
       </div>

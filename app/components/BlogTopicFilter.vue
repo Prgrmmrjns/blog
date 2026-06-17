@@ -1,16 +1,19 @@
 <script setup lang="ts">
-const props = defineProps<{
-  topics: string[];
-  modelValue: string | null;
+import type { TopicKey } from "~/utils/blogTopics";
+import type { TopicOption } from "~/composables/usePostTopicFilter";
+
+defineProps<{
+  topics: TopicOption[];
+  modelValue: TopicKey | null;
 }>();
 
 const emit = defineEmits<{
-  "update:modelValue": [value: string | null];
+  "update:modelValue": [value: TopicKey | null];
 }>();
 
 const { t } = useLocale();
 
-function select(topic: string | null) {
+function select(topic: TopicKey | null) {
   emit("update:modelValue", topic);
 }
 </script>
@@ -35,17 +38,17 @@ function select(topic: string | null) {
       </button>
       <button
         v-for="topic in topics"
-        :key="topic"
+        :key="topic.key"
         type="button"
         class="rounded-full px-3 py-1.5 text-xs font-semibold transition-colors"
         :class="
-          modelValue === topic
+          modelValue === topic.key
             ? 'bg-gold/25 text-gold ring-1 ring-gold/30'
             : 'bg-gold/10 text-gold/80 hover:bg-gold/20 dark:bg-gold/10 dark:text-gold dark:hover:bg-gold/20'
         "
-        @click="select(topic)"
+        @click="select(topic.key)"
       >
-        {{ topic }}
+        {{ topic.label }}
       </button>
     </div>
   </div>

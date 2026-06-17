@@ -4,6 +4,10 @@ excerpt: A personal list of books that shaped how I think about science, life, a
 date: "2026-03-22"
 locale: en
 slug: my-top-10-books-and-why-i-love-them
+topics:
+  - books
+  - personal
+  - science
 tags:
   - Books
   - Personal

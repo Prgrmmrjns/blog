@@ -1,12 +1,21 @@
 <script setup lang="ts">
-defineProps<{
+import { getPostTopics, translateTopic } from "~/utils/blogTopics";
+
+const props = defineProps<{
   title: string;
   excerpt: string;
   date: string;
+  topics?: string[];
   tags?: string[];
   slug: string;
   to: string;
 }>();
+
+const { locale } = useLocale();
+
+const topicLabels = computed(() =>
+  getPostTopics(props).slice(0, 2).map((key) => translateTopic(key, locale.value)),
+);
 </script>
 
 <template>
@@ -19,13 +28,13 @@ defineProps<{
     </div>
 
     <div class="flex flex-1 flex-col p-6">
-      <div class="mb-2 flex flex-wrap gap-2">
+      <div v-if="topicLabels.length" class="mb-2 flex flex-wrap gap-2">
         <span
-          v-for="tag in (tags ?? []).slice(0, 2)"
-          :key="tag"
+          v-for="label in topicLabels"
+          :key="label"
           class="rounded-full bg-gold/20 px-2 py-0.5 text-xs font-semibold text-gold"
         >
-          {{ tag }}
+          {{ label }}
         </span>
       </div>
       <h3 class="text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-teal dark:text-cream dark:group-hover:text-mint sm:text-2xl">
