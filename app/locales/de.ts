@@ -121,5 +121,7 @@ export default {
     healthActive: "Glukoseprognose aktualisiert",
     booksHint: "Stapel hovern",
     booksActive: "Fantasie entfesselt",
+    cursidianHint: "Wiki hovern",
+    cursidianActive: "Agents kompilieren den Graph",
   },
 } as const;

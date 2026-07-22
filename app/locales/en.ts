@@ -127,5 +127,7 @@ export default {
     healthActive: "glucose forecast updates",
     booksHint: "hover the stack",
     booksActive: "imagination unlocked",
+    cursidianHint: "hover the wiki",
+    cursidianActive: "agents compile the graph",
   },
 } as const;

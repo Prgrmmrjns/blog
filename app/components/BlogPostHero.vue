@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BlogHeroBooks from "./BlogHeroBooks.vue";
+import BlogHeroCursidian from "./BlogHeroCursidian.vue";
 import BlogHeroGradientBoosting from "./BlogHeroGradientBoosting.vue";
 import BlogHeroHealthMonitoring from "./BlogHeroHealthMonitoring.vue";
 
@@ -12,6 +13,7 @@ const heroes: Record<string, Component> = {
   "xgboost-vs-lightgbm-vs-catboost": BlogHeroGradientBoosting,
   "health-monitoring-and-ml-in-diabetes-research": BlogHeroHealthMonitoring,
   "my-top-10-books-and-why-i-love-them": BlogHeroBooks,
+  "cursidian-cursor-obsidian-llm-wiki": BlogHeroCursidian,
 };
 
 const heroComponent = computed(() => heroes[props.slug] ?? null);
