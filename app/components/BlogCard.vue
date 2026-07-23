@@ -14,12 +14,18 @@ const props = defineProps<{
 const topicLabels = computed(() =>
   getPostTopics(props).slice(0, 2).map((key) => topicLabel(key)),
 );
+
+function navigateHard(path: string) {
+  if (!import.meta.client) return;
+  window.location.assign(path);
+}
 </script>
 
 <template>
-  <NuxtLink
-    :to="to"
+  <a
+    :href="to"
     class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:scale-[1.01] hover:shadow-xl dark:bg-[#161616] dark:shadow-none dark:hover:shadow-[0_20px_60px_-10px_rgba(122,218,165,0.15)]"
+    @click.prevent="navigateHard(to)"
   >
     <div class="relative aspect-[16/9] shrink-0 overflow-hidden bg-[#f5f3eb] dark:bg-[#121212]">
       <BlogPostHero :slug="slug" compact />
@@ -45,5 +51,5 @@ const topicLabels = computed(() =>
         {{ date }}
       </p>
     </div>
-  </NuxtLink>
+  </a>
 </template>
