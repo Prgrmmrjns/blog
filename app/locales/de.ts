@@ -123,5 +123,7 @@ export default {
     booksActive: "Fantasie entfesselt",
     cursidianHint: "Wiki hovern",
     cursidianActive: "Agents kompilieren den Graph",
+    spielfeldHint: "Spielfeld hovern",
+    spielfeldActive: "XI-Tausch bewegt den Tipp",
   },
 } as const;

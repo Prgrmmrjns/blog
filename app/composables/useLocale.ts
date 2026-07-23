@@ -43,10 +43,12 @@ export function useLocale() {
   }
 
   function setLocale(next: Locale) {
+    if (locale.value === next) return;
     locale.value = next;
     localeCookie.value = next;
     if (import.meta.client) {
       document.documentElement.lang = next;
+      window.location.reload();
     }
   }
 

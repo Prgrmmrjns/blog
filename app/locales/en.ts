@@ -129,5 +129,7 @@ export default {
     booksActive: "imagination unlocked",
     cursidianHint: "hover the wiki",
     cursidianActive: "agents compile the graph",
+    spielfeldHint: "hover the pitch",
+    spielfeldActive: "XI swaps move the tip",
   },
 } as const;
