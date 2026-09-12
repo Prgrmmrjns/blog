@@ -31,6 +31,7 @@ npx --yes @marp-team/marp-cli@4 slides.md \
   --theme-set ../../theme/paper-club.css \
   --pdf \
   --allow-local-files \
+  --pdf-outlines \
   -o slides.pdf
 ```
 
