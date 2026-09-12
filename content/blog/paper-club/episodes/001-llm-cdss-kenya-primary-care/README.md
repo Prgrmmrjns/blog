@@ -13,8 +13,9 @@
 - [`script.md`](script.md) — spoken script with slide cues
 - [`slides.md`](slides.md) — Marp source
 - [`slides.html`](slides.html) — rendered deck (open in a browser)
-- [`slides.pdf`](slides.pdf) — 19-page PDF for recording or sharing
+- [`slides.pdf`](slides.pdf) — 19-page visual PDF
 - [`figures/`](figures/) — study images + [`SOURCES.md`](figures/SOURCES.md)
+- [`visuals/`](visuals/) — Unsplash photos, Lucide icons, custom diagrams + [`CREDITS.md`](visuals/CREDITS.md)
 
 Public copies for the live site: `/paper-club/episodes/001-llm-cdss-kenya-primary-care/`
 

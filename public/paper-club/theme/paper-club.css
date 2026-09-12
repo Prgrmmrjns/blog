@@ -251,3 +251,84 @@ img[alt~="logo"] {
   background: transparent;
   box-shadow: none;
 }
+
+section.cover h1 {
+  font-size: 64px;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+img[alt~="icon"] {
+  width: 56px;
+  height: 56px;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+img[alt~="diagram"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 16px;
+  max-height: 280px;
+  width: 100%;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.icon-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.icon-grid.five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.icon-card {
+  background: var(--panel);
+  border: 1px solid rgba(122, 218, 165, 0.22);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  min-height: 150px;
+}
+
+.icon-card img {
+  width: 44px;
+  height: 44px;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 0 10px;
+}
+
+.icon-card strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.icon-card span {
+  display: block;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.split-copy h1,
+.split-copy h2 {
+  font-size: 36px;
+}
+
+.split-copy p,
+.split-copy li {
+  font-size: 22px;
+}
+
+section.lead-photo {
+  padding-right: 48px;
+}
+
