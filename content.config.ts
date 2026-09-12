@@ -15,7 +15,10 @@ export default defineContentConfig({
   collections: {
     posts: defineCollection({
       type: "page",
-      source: "blog/**/*.md",
+      source: {
+        include: "blog/**/*.md",
+        exclude: ["blog/paper-club/**"],
+      },
       schema: postSchema,
     }),
   },

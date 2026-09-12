@@ -2,15 +2,16 @@
 
 Weekly YouTube series on new, high-impact, peer-reviewed studies in AI and medicine.
 
-The agent prepares the reading. You record and speak.
+Everything lives under `content/blog/paper-club/`. The agent prepares the reading. You record and speak.
 
 ## Weekly pipeline
 
 1. Pick a recent paper, preferably from a high-impact journal (`Nature Medicine`, `NEJM`, `Lancet`, `JAMA`, `Nature`, `BMJ`).
-2. Write a blog-ready markdown draft. Do **not** copy it into `content/blog/` until you want it live.
+2. Write the English post in `content/blog/en/<slug>.md` (optional German twin in `content/blog/de/`).
 3. Write a spoken video script with slide cues.
 4. Build a Marp slideshow that includes the study's own figures (with license-compliant attribution).
-5. You record over the slides.
+5. Copy figures, `slides.html`, and `slides.pdf` into `public/paper-club/episodes/<slug>/` so the live post can link them.
+6. You record over the slides.
 
 ## Render slides
 
@@ -24,7 +25,7 @@ npx --yes @marp-team/marp-cli@4 slides.md \
   -o slides.html
 ```
 
-PDF (needs Chrome/Chromium):
+PDF:
 
 ```bash
 npx --yes @marp-team/marp-cli@4 slides.md \
@@ -35,22 +36,20 @@ npx --yes @marp-team/marp-cli@4 slides.md \
   -o slides.pdf
 ```
 
-Open `slides.html` in a browser. Present with arrow keys. Record your voice over the deck.
+Then copy `slides.html`, `slides.pdf`, `figures/`, and `theme/` into the matching `public/paper-club/` paths.
 
 ## Episode layout
 
 ```
-paper-club/episodes/NNN-short-slug/
-  blog.md       # Nuxt-ready draft (copy to content/blog/en/ to publish)
+content/blog/paper-club/episodes/NNN-short-slug/
   script.md     # spoken script with slide markers
   slides.md     # Marp source
   slides.html   # rendered deck
+  slides.pdf    # 16:9 PDF
   figures/      # study images + SOURCES.md
+
+content/blog/en/<slug>.md   # published post
 ```
-
-## Publishing the blog later
-
-Copy `blog.md` to `content/blog/en/<slug>.md`. Add a German translation under `content/blog/de/` if you want both locales. Then deploy as usual.
 
 ## License rule for figures
 

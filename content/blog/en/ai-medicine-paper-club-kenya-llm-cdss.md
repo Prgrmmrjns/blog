@@ -18,9 +18,7 @@ tags:
   - Science
 ---
 
-This is a draft for **AI in Medicine Paper Club**, a weekly series I want to run on YouTube: one new high-impact paper, a short script, a slideshow, then I talk through it. The markdown below is ready to publish here later. It is not live yet.
-
----
+This is **AI in Medicine Paper Club**, a weekly series I want to run on YouTube: one new high-impact paper, a short script, a slideshow, then I talk through it.
 
 Large language models look brilliant on exams, vignettes, and leaderboards. That is not the same thing as helping a patient who walked into clinic this morning.
 
@@ -52,7 +50,7 @@ Mean model cost: **US$0.04 per patient**.
 
 They randomized 103 clinical officers (52 LLM, 51 control) rather than patients, so a clinician would not bounce between arms. Between 22 April and 16 July 2025 they screened 17,626 visits and analyzed 4,693 intervention and 4,654 control encounters. Most patients were 18–55; 56% were women; about 60% presented with febrile or infectious illness.
 
-![CONSORT flow diagram of the cluster-randomized trial](figures/fig1-consort.png)
+![CONSORT flow diagram of the cluster-randomized trial](/paper-club/episodes/001-llm-cdss-kenya-primary-care/figures/fig1-consort.png)
 
 *Fig. 1 from Agweyu et al., *Nature Medicine* (2026), CC BY 4.0. Cluster randomization at the clinical-officer level.*
 
@@ -64,7 +62,7 @@ They powered the study for a heroic 50% relative reduction, from 2% to 1%. That 
 
 Treatment failure: **102 / 4,693 (2.2%)** with the LLM versus **94 / 4,654 (2.0%)** without. Adjusted odds ratio **0.77** (95% CI 0.55–1.08, *P* = 0.13). Same estimate in the per-protocol analysis. Extra covariate adjustment nudged it to 0.72 (0.50–1.03, *P* = 0.07) — still not significant.
 
-![Table 2: treatment failure in ITT and per-protocol analyses](figures/table2-primary-outcome.png)
+![Table 2: treatment failure in ITT and per-protocol analyses](/paper-club/episodes/001-llm-cdss-kenya-primary-care/figures/table2-primary-outcome.png)
 
 *Table 2 from Agweyu et al., CC BY 4.0.*
 
@@ -77,7 +75,7 @@ Event rates were as low as expected, which means the trial was precise enough to
 
 Subgroups (age, weekend vs weekday, sentinel conditions, night vs day) did not show a convincing interaction. Site-level estimates mostly pointed in the same direction — toward benefit — with wide intervals and low heterogeneity (τ = 0.22).
 
-![Subgroup forest plot for 14-day treatment failure](figures/fig-ed1-subgroups.png)
+![Subgroup forest plot for 14-day treatment failure](/paper-club/episodes/001-llm-cdss-kenya-primary-care/figures/fig-ed1-subgroups.png)
 
 *Extended Data Fig. 1 from Agweyu et al., CC BY 4.0.*
 
@@ -85,7 +83,7 @@ Subgroups (age, weekend vs weekday, sentinel conditions, night vs day) did not s
 
 On 2,000 notes scored by the expert panel, LLM-assisted officers were more likely to record an appropriate diagnosis (aOR 1.74), a comprehensive note (1.68), and an appropriate plan (1.71). All *P* < 0.001.
 
-![Documentation quality and safety Sankey](figures/fig2-documentation-safety.png)
+![Documentation quality and safety Sankey](/paper-club/episodes/001-llm-cdss-kenya-primary-care/figures/fig2-documentation-safety.png)
 
 *Fig. 2 from Agweyu et al., CC BY 4.0. Panel a: documentation ratings. Panel b: what happened after 1,000 red alerts.*
 
@@ -95,7 +93,7 @@ That Sankey is the slide I would linger on in journal club. A model can be mostl
 
 Prescribing and sentinel conditions were mostly null: antibiotics, antimalarials, hypertension, childhood malnutrition. One wrinkle: fewer patients were labelled "at risk of type 2 diabetes" in the LLM arm (aOR 0.88, *P* = 0.023). The authors' interpretation — the model may have reclassified some people as already having diabetes rather than merely at risk — is plausible and unproven.
 
-![Prescribing and sentinel-condition outcomes](figures/fig3-sentinel-conditions.png)
+![Prescribing and sentinel-condition outcomes](/paper-club/episodes/001-llm-cdss-kenya-primary-care/figures/fig3-sentinel-conditions.png)
 
 *Fig. 3 from Agweyu et al., CC BY 4.0.*
 
@@ -126,7 +124,7 @@ And the obvious caveat: this is one model version, one private urban network, 14
 
 ## Watch-along
 
-A spoken script and a Marp deck built from the paper's own figures (CC BY 4.0) are in `paper-club/episodes/001-llm-cdss-kenya-primary-care/` in this repo. I will record over those slides; they are not on YouTube yet.
+A spoken script and a Marp deck built from the paper's own figures (CC BY 4.0) live with this post: [slides (PDF)](/paper-club/episodes/001-llm-cdss-kenya-primary-care/slides.pdf) · [slides (HTML)](/paper-club/episodes/001-llm-cdss-kenya-primary-care/slides.html). Source files are in `content/blog/paper-club/episodes/001-llm-cdss-kenya-primary-care/`. Not on YouTube yet.
 
 Paper: Agweyu et al., *Nat Med* (2026). [doi:10.1038/s41591-026-04503-6](https://doi.org/10.1038/s41591-026-04503-6). Protocol on [Zenodo](https://zenodo.org/records/15788148).
 
