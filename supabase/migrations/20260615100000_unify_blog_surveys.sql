@@ -31,20 +31,24 @@ CREATE POLICY "Anyone can submit blog survey response"
     AND answer IS NOT NULL
   );
 
--- Migrate legacy health survey data if present
-INSERT INTO blog_survey_responses (post_slug, survey_id, answer, numeric_value, created_at)
-SELECT
-  post_slug,
-  'health-data-sharing',
-  score::text,
-  score,
-  created_at
-FROM health_data_survey_responses
-WHERE EXISTS (
-  SELECT 1 FROM information_schema.tables
-  WHERE table_schema = 'public' AND table_name = 'health_data_survey_responses'
-);
+-- Migrate legacy health survey data if present.
+-- Guarded in PL/pgSQL so the reference to the legacy table is only resolved
+-- when it actually exists (a plain SELECT ... FROM would fail to parse on a
+-- fresh project where the legacy table was never created).
+DO $$
+BEGIN
+  IF to_regclass('public.health_data_survey_responses') IS NOT NULL THEN
+    INSERT INTO blog_survey_responses (post_slug, survey_id, answer, numeric_value, created_at)
+    SELECT
+      post_slug,
+      'health-data-sharing',
+      score::text,
+      score,
+      created_at
+    FROM health_data_survey_responses;
 
-DROP POLICY IF EXISTS "Anyone can read survey responses" ON health_data_survey_responses;
-DROP POLICY IF EXISTS "Anyone can submit survey response" ON health_data_survey_responses;
-DROP TABLE IF EXISTS health_data_survey_responses;
+    DROP POLICY IF EXISTS "Anyone can read survey responses" ON health_data_survey_responses;
+    DROP POLICY IF EXISTS "Anyone can submit survey response" ON health_data_survey_responses;
+    DROP TABLE IF EXISTS health_data_survey_responses;
+  END IF;
+END $$;
