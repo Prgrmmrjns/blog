@@ -1,6 +1,6 @@
 {
   "name": "recipes-blog (Nuxt personal blog)",
-  "install": "npm install",
+  "install": "npm install\nif [ ! -f .env ]; then printf 'SUPABASE_URL=https://placeholder.supabase.co\\nSUPABASE_KEY=placeholder-anon-key\\n' > .env; fi",
   "terminals": [
     {
       "name": "nuxt-dev",
