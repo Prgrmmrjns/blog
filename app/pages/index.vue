@@ -30,6 +30,29 @@ const { pending, selectedTopic, allTopics, filteredPosts } = useBlogPostList("ho
     </header>
 
     <main class="mx-auto max-w-7xl px-6 pb-32">
+      <section class="relative mb-16 overflow-hidden rounded-[2rem] border border-gray-200 bg-white/90 px-6 py-12 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:px-10 sm:py-16 lg:mb-20 lg:px-14 lg:py-20">
+        <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
+        <div class="pointer-events-none absolute -bottom-24 -left-10 h-56 w-56 rounded-full bg-teal/15 blur-3xl" />
+        <div class="relative z-10 max-w-3xl">
+          <p class="text-xs font-bold uppercase tracking-[0.28em] text-teal dark:text-mint">
+            {{ t("home.freelanceLabel") }}
+          </p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-gray-900 dark:text-cream sm:text-5xl lg:text-6xl">
+            {{ t("home.freelanceTitle") }}
+          </h2>
+          <p class="mt-6 max-w-2xl text-lg font-light leading-relaxed text-gray-600 dark:text-cream/65 sm:text-xl">
+            {{ t("home.freelanceLead") }}
+          </p>
+          <NuxtLink
+            to="/freelancing"
+            class="mt-8 inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-dark dark:bg-mint dark:text-[#0e0e0e] dark:hover:bg-mint-dark"
+          >
+            {{ t("home.freelanceCta") }}
+            <span aria-hidden="true">→</span>
+          </NuxtLink>
+        </div>
+      </section>
+
       <h2 class="mb-6 text-xl font-bold text-gold">{{ t("home.latestPosts") }}</h2>
 
       <BlogTopicFilter v-model="selectedTopic" :topics="allTopics" />
@@ -53,7 +76,7 @@ const { pending, selectedTopic, allTopics, filteredPosts } = useBlogPostList("ho
           :tags="post.tags"
         />
       </div>
-      <p v-else class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50">
+      <p v-else-if="selectedTopic" class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50">
         {{ t("blog.noPostsForTopic") }}
       </p>
     </main>

@@ -20,6 +20,7 @@ export default {
   },
   nav: {
     blog: "Blog",
+    freelancing: "Freelancing",
     about: "About",
     contact: "Contact",
   },
@@ -28,6 +29,11 @@ export default {
     motto: "Curiosity is all you need.",
     subtitle: "Doctoral student in Computational Biomedicine · RWTH Aachen",
     latestPosts: "Latest posts",
+    freelanceLabel: "Freelancing",
+    freelanceTitle: "I build an AI knowledge system with you.",
+    freelanceLead:
+      "A few days together. One concrete system you can use — delivered as a website, a chatbot, or a small automation script.",
+    freelanceCta: "How the work runs",
   },
   blog: {
     title: "Blog",
@@ -73,6 +79,37 @@ export default {
     beyondP2:
       "Charity matters deeply to me — doing good for other people, including people I will never meet. I try to show up with generosity in everyday life, not only through research. I also have some very cool startup ideas in the back of my mind; maybe one day I will actually found one.",
     hobbies: ["Football", "Running", "Chess", "Vegan", "Christian", "Charity", "Travel", "Languages"],
+  },
+  freelancing: {
+    title: "Freelancing — Jonas Wolber",
+    metaDescription:
+      "Jonas Wolber builds an AI-based personal knowledge system with you over a few days. The result can be a website, a chatbot, or an automation script.",
+    label: "Freelancing",
+    heading: "An AI knowledge system, built with you",
+    intro:
+      "The work is one system for one person: notes and files captured, structured, and findable with a model. A website, a chatbot, or an automation script is how that system is delivered.",
+    workflowLabel: "The engagement",
+    steps: [
+      {
+        title: "A few days",
+        text: "We start from the notes, files, and tool you already use, and shape the system around that.",
+      },
+      {
+        title: "One result",
+        text: "You leave with one working system and a short handover. That is the whole engagement.",
+      },
+    ],
+    deliverLabel: "How it is delivered",
+    deliver: ["Website", "Chatbot", "Automation script"],
+    exampleLabel: "A finished example",
+    exampleText:
+      "Belegcheck reads invoice PDFs and checks the amounts. It is a tool I already shipped, and it shows the kind of result a short engagement can produce.",
+    exampleHrefLabel: "belegcheck.vercel.app",
+    contactLabel: "Get in touch",
+    contactText:
+      "Message me on LinkedIn. The contact page lists the same channels I already use.",
+    linkedin: "Message on LinkedIn",
+    contactPage: "Contact page",
   },
   contact: {
     title: "Contact — Jonas Wolber",

@@ -13,6 +13,7 @@ export default {
   },
   nav: {
     blog: "Blog",
+    freelancing: "Freelancing",
     about: "Über mich",
     contact: "Kontakt",
   },
@@ -21,6 +22,11 @@ export default {
     motto: "Neugier ist alles, was du brauchst.",
     subtitle: "Doktorand in Computational Biomedicine · RWTH Aachen",
     latestPosts: "Neueste Beiträge",
+    freelanceLabel: "Freelancing",
+    freelanceTitle: "Ich baue mit dir ein KI-Wissenssystem.",
+    freelanceLead:
+      "Ein paar Tage zusammen. Ein konkretes System, das du nutzen kannst — als Website, Chatbot oder kleines Automatisierungsskript.",
+    freelanceCta: "So läuft die Arbeit",
   },
   blog: {
     title: "Blog",
@@ -67,6 +73,37 @@ export default {
     beyondP2:
       "Wohltätigkeit ist mir sehr wichtig — Gutes zu tun für andere Menschen, auch für Menschen, die ich nie kennenlernen werde. Ich versuche, im Alltag großzügig zu sein, nicht nur durch die Forschung. Außerdem habe ich einige sehr coole Startup-Ideen im Hinterkopf; vielleicht gründe ich eines Tages tatsächlich eines.",
     hobbies: ["Fußball", "Laufen", "Schach", "Vegan", "Christlich", "Wohltätigkeit", "Reisen", "Sprachen"],
+  },
+  freelancing: {
+    title: "Freelancing — Jonas Wolber",
+    metaDescription:
+      "Jonas Wolber baut mit dir in ein paar Tagen ein persönliches Wissenssystem auf KI-Basis. Das Ergebnis kann eine Website, ein Chatbot oder ein Automatisierungsskript sein.",
+    label: "Freelancing",
+    heading: "Ein KI-Wissenssystem, mit dir gebaut",
+    intro:
+      "Die Arbeit ist ein System für eine Person: Notizen und Dateien erfassen, ordnen und mit einem Modell wiederfinden. Eine Website, ein Chatbot oder ein Automatisierungsskript ist die Form, in der das System ankommt.",
+    workflowLabel: "Der Ablauf",
+    steps: [
+      {
+        title: "Ein paar Tage",
+        text: "Wir starten bei den Notizen, Dateien und dem Werkzeug, das du schon nutzt, und bauen das System darum.",
+      },
+      {
+        title: "Ein Ergebnis",
+        text: "Du gehst mit einem laufenden System und einer kurzen Übergabe. Das ist der ganze Auftrag.",
+      },
+    ],
+    deliverLabel: "So wird es geliefert",
+    deliver: ["Website", "Chatbot", "Automatisierungsskript"],
+    exampleLabel: "Ein fertiges Beispiel",
+    exampleText:
+      "Belegcheck liest Rechnungs-PDFs und prüft die Beträge. Es ist ein Werkzeug, das ich schon ausgeliefert habe, und zeigt, was ein kurzer Auftrag ergeben kann.",
+    exampleHrefLabel: "belegcheck.vercel.app",
+    contactLabel: "Kontakt",
+    contactText:
+      "Schreib mir auf LinkedIn. Die Kontaktseite listet dieselben Kanäle, die ich schon nutze.",
+    linkedin: "Nachricht auf LinkedIn",
+    contactPage: "Kontaktseite",
   },
   contact: {
     title: "Kontakt — Jonas Wolber",
