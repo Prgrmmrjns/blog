@@ -40,25 +40,15 @@ function indexLabel(index: number) {
         </header>
 
         <div class="grid gap-8 sm:gap-10 lg:grid-cols-2">
-          <component
-            :is="item.href ? 'a' : 'article'"
+          <article
             v-for="(item, index) in freelanceCases"
             :id="item.id"
             :key="item.id"
-            :href="item.href"
-            :target="item.href ? '_blank' : undefined"
-            :rel="item.href ? 'noopener noreferrer' : undefined"
-            class="group scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/95 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg dark:border-white/10 dark:bg-[#161616]/95 dark:hover:shadow-[0_24px_60px_-18px_rgba(122,218,165,0.18)]"
+            class="scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/95 shadow-sm dark:border-white/10 dark:bg-[#161616]/95"
             :class="index === 0 ? 'lg:col-span-2' : ''"
           >
             <div class="relative aspect-[16/9] overflow-hidden bg-[#efece3] dark:bg-[#121212]">
-              <img
-                :src="item.image"
-                :alt="cases[item.id].title"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                width="1280"
-                height="720"
-              />
+              <FreelanceCaseArt :id="item.id" :label="cases[item.id].title" />
             </div>
             <div class="px-5 py-6 sm:px-7 sm:py-7" :class="index === 0 ? 'sm:px-8 sm:py-8' : ''">
               <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold">
@@ -73,15 +63,18 @@ function indexLabel(index: number) {
               <p class="mt-3 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-cream/65">
                 {{ cases[item.id].text }}
               </p>
-              <p
+              <a
                 v-if="item.href"
-                class="mt-4 text-sm font-semibold text-teal dark:text-mint"
+                :href="item.href"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal dark:text-mint"
               >
                 {{ t("freelancing.openCase") }}
                 <span aria-hidden="true">↗</span>
-              </p>
+              </a>
             </div>
-          </component>
+          </article>
         </div>
 
         <section class="mt-12 rounded-[1.75rem] border border-teal/20 bg-teal/5 px-6 py-8 sm:px-8 dark:bg-teal/10">
