@@ -1,0 +1,11 @@
+{
+  "name": "recipes-blog (Nuxt personal blog)",
+  "install": "npm install",
+  "terminals": [
+    {
+      "name": "nuxt-dev",
+      "command": "npm run dev"
+    }
+  ],
+  "ports": [3000]
+}
