@@ -30,10 +30,12 @@ export default {
     subtitle: "Doctoral student in Computational Biomedicine · RWTH Aachen",
     latestPosts: "Latest posts",
     freelanceLabel: "Freelancing",
-    freelanceTitle: "I build an AI knowledge system with you.",
+    freelanceTitle: "Deployment, automation, and knowledge systems.",
     freelanceLead:
-      "A few days together. One concrete system you can use — delivered as a website, a chatbot, or a small automation script.",
-    freelanceCta: "How the work runs",
+      "I have done this in companies and with researchers: AI that is actually deployed, the repetitive steps taken out, and notes a person can find again. The first call is free.",
+    freelanceCta: "Ten cases",
+    freelanceLinkedin: "Write on LinkedIn",
+    freelanceContact: "Contact page",
   },
   blog: {
     title: "Blog",
@@ -83,33 +85,58 @@ export default {
   freelancing: {
     title: "Freelancing — Jonas Wolber",
     metaDescription:
-      "Jonas Wolber builds an AI-based personal knowledge system with you over a few days. The result can be a website, a chatbot, or an automation script.",
+      "AI deployment, automation, and personal knowledge systems for companies and researchers. Ten cases. The first call is free.",
     label: "Freelancing",
-    heading: "An AI knowledge system, built with you",
+    heading: "Ten cases",
     intro:
-      "The work is one system for one person: notes and files captured, structured, and findable with a model. A website, a chatbot, or an automation script is how that system is delivered.",
-    workflowLabel: "The engagement",
-    steps: [
-      {
-        title: "A few days",
-        text: "We start from the notes, files, and tool you already use, and shape the system around that.",
-      },
-      {
-        title: "One result",
-        text: "You leave with one working system and a short handover. That is the whole engagement.",
-      },
-    ],
-    deliverLabel: "How it is delivered",
-    deliver: ["Website", "Chatbot", "Automation script"],
-    exampleLabel: "A finished example",
-    exampleText:
-      "Belegcheck reads invoice PDFs and checks the amounts. It is a tool I already shipped, and it shows the kind of result a short engagement can produce.",
-    exampleHrefLabel: "belegcheck.vercel.app",
-    contactLabel: "Get in touch",
-    contactText:
-      "Message me on LinkedIn. The contact page lists the same channels I already use.",
-    linkedin: "Message on LinkedIn",
+      "AI deployment, automation, and personal knowledge systems. I have done this in company settings and for researchers. The first call is free.",
+    openCase: "Open",
+    contactLabel: "A call, free of charge",
+    contactText: "Write on LinkedIn, or use the contact page. Same channels I already use.",
+    linkedin: "Write on LinkedIn",
     contactPage: "Contact page",
+    cases: {
+      belegcheck: {
+        title: "Belegcheck",
+        text: "Invoice PDFs: the amounts, the tax, and what is still unpaid.",
+      },
+      obsidian: {
+        title: "Obsidian vault integration",
+        text: "A vault wired into the work around it, so the notes stay where the day already happens.",
+      },
+      website: {
+        title: "Website creation",
+        text: "A site shaped around the work, built and put online.",
+      },
+      excel: {
+        title: "Excel automation",
+        text: "Sheets that check themselves and carry the numbers forward.",
+      },
+      images: {
+        title: "Image processing",
+        text: "Pictures cropped, split, and cleaned as one step in a workflow.",
+      },
+      inbox: {
+        title: "Inbox and email automation",
+        text: "Mail sorted and turned into the next useful thing, instead of another pile.",
+      },
+      meetings: {
+        title: "Meeting notes into tasks",
+        text: "A conversation that leaves as tasks, not as a transcript nobody opens.",
+      },
+      chatbot: {
+        title: "Chatbot on an existing site",
+        text: "A chat docked on a site that already exists, answering from that site.",
+      },
+      search: {
+        title: "Search across company documents",
+        text: "Search that lands on the paragraph, not only the file name.",
+      },
+      papers: {
+        title: "Research paper workflow",
+        text: "From a PDF to notes, citations, and the next question.",
+      },
+    },
   },
   contact: {
     title: "Contact — Jonas Wolber",

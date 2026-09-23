@@ -1,90 +1,97 @@
 <script setup lang="ts">
+import { freelanceCases, type FreelanceCaseId } from "~/data/freelance-cases";
+
 const { t, tm } = useLocale();
 
-const steps = computed(() => tm<{ title: string; text: string }[]>("freelancing.steps"));
-const deliver = computed(() => tm<string[]>("freelancing.deliver"));
+const cases = computed(() =>
+  tm<Record<FreelanceCaseId, { title: string; text: string }>>("freelancing.cases"),
+);
 
 useHead(() => ({
   title: t("freelancing.title"),
   meta: [{ name: "description", content: t("freelancing.metaDescription") }],
 }));
+
+function indexLabel(index: number) {
+  return String(index + 1).padStart(2, "0");
+}
 </script>
 
 <template>
   <div class="min-h-[calc(100dvh-4rem)] overflow-x-hidden bg-[#f5f3eb] dark:bg-[#0e0e0e]">
-    <div class="relative px-5 py-10 sm:px-8 sm:py-12 lg:py-16">
-      <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-teal/10 via-transparent to-gold/10" />
-      <div class="pointer-events-none absolute -right-24 top-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
-      <div class="pointer-events-none absolute -left-16 bottom-0 h-48 w-48 rounded-full bg-teal/10 blur-3xl" />
+    <div class="relative px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal/10 via-transparent to-gold/10" />
+        <div class="absolute -right-24 top-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+        <div class="absolute -left-16 bottom-0 h-48 w-48 rounded-full bg-teal/10 blur-3xl" />
+      </div>
 
-      <div class="relative z-10 mx-auto w-full max-w-3xl">
-        <header class="mb-10">
+      <div class="relative z-10 mx-auto w-full max-w-6xl">
+        <header class="mb-10 max-w-3xl lg:mb-14">
           <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-teal dark:text-mint">
             {{ t("freelancing.label") }}
           </p>
           <h1 class="mt-2 font-display text-4xl font-extrabold leading-tight text-gray-900 dark:text-cream sm:text-5xl">
             {{ t("freelancing.heading") }}
           </h1>
-          <p class="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-cream/65 sm:text-lg">
+          <p class="mt-4 text-base leading-relaxed text-gray-600 dark:text-cream/65 sm:text-lg">
             {{ t("freelancing.intro") }}
           </p>
         </header>
 
-        <section class="rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:p-6">
-          <p class="text-[10px] font-bold uppercase tracking-wider text-gold">{{ t("freelancing.workflowLabel") }}</p>
-          <ol class="mt-4 grid gap-4 sm:grid-cols-2">
-            <li
-              v-for="(step, index) in steps"
-              :key="step.title"
-              class="rounded-xl bg-[#f5f3eb]/80 px-4 py-4 dark:bg-[#0e0e0e]/50"
-            >
-              <p class="text-[10px] font-bold uppercase tracking-wider text-teal dark:text-mint">
-                {{ index + 1 }}
-              </p>
-              <p class="mt-1 text-lg font-semibold text-gray-900 dark:text-cream">{{ step.title }}</p>
-              <p class="mt-2 text-sm leading-relaxed text-gray-600 dark:text-cream/60">{{ step.text }}</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="mt-4 rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:p-6">
-          <p class="text-[10px] font-bold uppercase tracking-wider text-teal dark:text-mint">
-            {{ t("freelancing.deliverLabel") }}
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span
-              v-for="item in deliver"
-              :key="item"
-              class="rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal dark:bg-mint/10 dark:text-mint"
-            >
-              {{ item }}
-            </span>
-          </div>
-        </section>
-
-        <section class="mt-4 rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:p-6">
-          <p class="text-[10px] font-bold uppercase tracking-wider text-gold">{{ t("freelancing.exampleLabel") }}</p>
-          <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-cream/70">
-            {{ t("freelancing.exampleText") }}
-          </p>
-          <a
-            href="https://belegcheck.vercel.app"
-            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal transition hover:text-teal-dark dark:text-mint dark:hover:text-mint-dark"
-            rel="noopener noreferrer"
+        <div class="grid gap-8 sm:gap-10 lg:grid-cols-2">
+          <component
+            :is="item.href ? 'a' : 'article'"
+            v-for="(item, index) in freelanceCases"
+            :id="item.id"
+            :key="item.id"
+            :href="item.href"
+            :target="item.href ? '_blank' : undefined"
+            :rel="item.href ? 'noopener noreferrer' : undefined"
+            class="group scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/95 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg dark:border-white/10 dark:bg-[#161616]/95 dark:hover:shadow-[0_24px_60px_-18px_rgba(122,218,165,0.18)]"
+            :class="index === 0 ? 'lg:col-span-2' : ''"
           >
-            {{ t("freelancing.exampleHrefLabel") }}
-            <span aria-hidden="true">↗</span>
-          </a>
-        </section>
+            <div class="relative aspect-[16/9] overflow-hidden bg-[#efece3] dark:bg-[#121212]">
+              <img
+                :src="item.image"
+                :alt="cases[item.id].title"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                width="1280"
+                height="720"
+              />
+            </div>
+            <div class="px-5 py-6 sm:px-7 sm:py-7" :class="index === 0 ? 'sm:px-8 sm:py-8' : ''">
+              <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold">
+                {{ indexLabel(index) }}
+              </p>
+              <h2
+                class="mt-2 font-display text-2xl font-extrabold leading-tight text-gray-900 dark:text-cream sm:text-3xl"
+                :class="index === 0 ? 'lg:text-4xl' : ''"
+              >
+                {{ cases[item.id].title }}
+              </h2>
+              <p class="mt-3 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-cream/65">
+                {{ cases[item.id].text }}
+              </p>
+              <p
+                v-if="item.href"
+                class="mt-4 text-sm font-semibold text-teal dark:text-mint"
+              >
+                {{ t("freelancing.openCase") }}
+                <span aria-hidden="true">↗</span>
+              </p>
+            </div>
+          </component>
+        </div>
 
-        <section class="mt-4 rounded-2xl border border-teal/20 bg-teal/5 p-5 dark:bg-teal/5 sm:p-6">
-          <p class="text-[10px] font-bold uppercase tracking-wider text-teal dark:text-mint">
+        <section class="mt-12 rounded-[1.75rem] border border-teal/20 bg-teal/5 px-6 py-8 sm:px-8 dark:bg-teal/10">
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-teal dark:text-mint">
             {{ t("freelancing.contactLabel") }}
           </p>
-          <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-cream/70">
+          <p class="mt-3 max-w-xl text-base leading-relaxed text-gray-700 dark:text-cream/75">
             {{ t("freelancing.contactText") }}
           </p>
-          <div class="mt-5 flex flex-wrap gap-3">
+          <div class="mt-6 flex flex-wrap gap-3">
             <a
               href="https://www.linkedin.com/in/jonas-wolber/"
               target="_blank"

@@ -23,10 +23,12 @@ export default {
     subtitle: "Doktorand in Computational Biomedicine · RWTH Aachen",
     latestPosts: "Neueste Beiträge",
     freelanceLabel: "Freelancing",
-    freelanceTitle: "Ich baue mit dir ein KI-Wissenssystem.",
+    freelanceTitle: "Deployment, Automatisierung, Wissenssysteme.",
     freelanceLead:
-      "Ein paar Tage zusammen. Ein konkretes System, das du nutzen kannst — als Website, Chatbot oder kleines Automatisierungsskript.",
-    freelanceCta: "So läuft die Arbeit",
+      "Das habe ich in Firmen und mit Forschenden gemacht: KI, die wirklich läuft, die wiederkehrenden Schritte weg, und Notizen, die eine Person wiederfindet. Das erste Gespräch ist kostenlos.",
+    freelanceCta: "Zehn Fälle",
+    freelanceLinkedin: "Auf LinkedIn schreiben",
+    freelanceContact: "Kontaktseite",
   },
   blog: {
     title: "Blog",
@@ -77,33 +79,58 @@ export default {
   freelancing: {
     title: "Freelancing — Jonas Wolber",
     metaDescription:
-      "Jonas Wolber baut mit dir in ein paar Tagen ein persönliches Wissenssystem auf KI-Basis. Das Ergebnis kann eine Website, ein Chatbot oder ein Automatisierungsskript sein.",
+      "KI-Deployment, Automatisierung und persönliche Wissenssysteme für Firmen und Forschende. Zehn Fälle. Das erste Gespräch ist kostenlos.",
     label: "Freelancing",
-    heading: "Ein KI-Wissenssystem, mit dir gebaut",
+    heading: "Zehn Fälle",
     intro:
-      "Die Arbeit ist ein System für eine Person: Notizen und Dateien erfassen, ordnen und mit einem Modell wiederfinden. Eine Website, ein Chatbot oder ein Automatisierungsskript ist die Form, in der das System ankommt.",
-    workflowLabel: "Der Ablauf",
-    steps: [
-      {
-        title: "Ein paar Tage",
-        text: "Wir starten bei den Notizen, Dateien und dem Werkzeug, das du schon nutzt, und bauen das System darum.",
-      },
-      {
-        title: "Ein Ergebnis",
-        text: "Du gehst mit einem laufenden System und einer kurzen Übergabe. Das ist der ganze Auftrag.",
-      },
-    ],
-    deliverLabel: "So wird es geliefert",
-    deliver: ["Website", "Chatbot", "Automatisierungsskript"],
-    exampleLabel: "Ein fertiges Beispiel",
-    exampleText:
-      "Belegcheck liest Rechnungs-PDFs und prüft die Beträge. Es ist ein Werkzeug, das ich schon ausgeliefert habe, und zeigt, was ein kurzer Auftrag ergeben kann.",
-    exampleHrefLabel: "belegcheck.vercel.app",
-    contactLabel: "Kontakt",
-    contactText:
-      "Schreib mir auf LinkedIn. Die Kontaktseite listet dieselben Kanäle, die ich schon nutze.",
-    linkedin: "Nachricht auf LinkedIn",
+      "KI-Deployment, Automatisierung und persönliche Wissenssysteme. Das habe ich in Firmen und für Forschende gemacht. Das erste Gespräch ist kostenlos.",
+    openCase: "Öffnen",
+    contactLabel: "Ein Gespräch, kostenlos",
+    contactText: "Schreib auf LinkedIn, oder nutze die Kontaktseite. Dieselben Kanäle, die ich schon habe.",
+    linkedin: "Auf LinkedIn schreiben",
     contactPage: "Kontaktseite",
+    cases: {
+      belegcheck: {
+        title: "Belegcheck",
+        text: "Rechnungs-PDFs: die Beträge, die Steuer und was noch offen ist.",
+      },
+      obsidian: {
+        title: "Obsidian-Vault-Anbindung",
+        text: "Ein Vault, der an die Arbeit drumherum angeschlossen ist, damit die Notizen dort bleiben, wo der Tag schon stattfindet.",
+      },
+      website: {
+        title: "Website erstellen",
+        text: "Eine Seite, die zur Arbeit passt, gebaut und online.",
+      },
+      excel: {
+        title: "Excel-Automatisierung",
+        text: "Tabellen, die sich selbst prüfen und die Zahlen weitertragen.",
+      },
+      images: {
+        title: "Bildverarbeitung",
+        text: "Bilder zuschneiden, trennen und säubern, als ein Schritt im Ablauf.",
+      },
+      inbox: {
+        title: "Posteingang und E-Mail-Automatisierung",
+        text: "Post sortiert und in das nächste Nützliche verwandelt, statt in einen weiteren Stapel.",
+      },
+      meetings: {
+        title: "Besprechungsnotizen zu Aufgaben",
+        text: "Ein Gespräch, das als Aufgaben zurückbleibt, nicht als Transkript, das niemand öffnet.",
+      },
+      chatbot: {
+        title: "Chatbot auf einer bestehenden Seite",
+        text: "Ein Chat auf einer Seite, die es schon gibt, und der aus dieser Seite antwortet.",
+      },
+      search: {
+        title: "Suche über Firmendokumente",
+        text: "Suche, die beim Absatz landet, nicht nur beim Dateinamen.",
+      },
+      papers: {
+        title: "Workflow für Forschungsarbeiten",
+        text: "Vom PDF zu Notizen, Zitaten und der nächsten Frage.",
+      },
+    },
   },
   contact: {
     title: "Kontakt — Jonas Wolber",
