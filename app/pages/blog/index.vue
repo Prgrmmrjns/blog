@@ -42,7 +42,7 @@ useHead(() => ({
         />
       </div>
       <p v-else class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50">
-        {{ t("blog.noPostsForTopic") }}
+        {{ selectedTopic ? t("blog.noPostsForTopic") : t("blog.emptyPosts") }}
       </p>
     </main>
 

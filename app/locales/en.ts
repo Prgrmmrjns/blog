@@ -47,6 +47,7 @@ export default {
     filterByTopic: "Filter by topic",
     loadingPosts: "Loading posts…",
     noPostsForTopic: "No posts match this topic yet.",
+    emptyPosts: "No posts yet.",
   },
   about: {
     title: "About — Jonas Wolber",
@@ -91,6 +92,11 @@ export default {
     intro:
       "AI deployment, automation, and personal knowledge systems. I have done this in company settings and for researchers. The first call is free.",
     openCase: "Open",
+    readWorkflow: "Workflow",
+    back: "All cases",
+    workflow: "Workflow",
+    github: "GitHub",
+    live: "Live app",
     contactLabel: "A call, free of charge",
     contactText: "Write on LinkedIn, or use the contact page. Same channels I already use.",
     linkedin: "Write on LinkedIn",
@@ -99,42 +105,93 @@ export default {
       belegcheck: {
         title: "Belegcheck",
         text: "Invoice PDFs: the amounts, the tax, and what is still unpaid.",
+        steps: [
+          "Open a supplier invoice PDF in the browser.",
+          "The page reads the vendor, the net, the tax, the gross, the due date, and the lines.",
+          "It flags a tax that does not match the total, an unpaid invoice past its due date, and a line that is only partly covered.",
+          "Marking one line paid leaves the invoice partial until the rest is paid.",
+        ],
       },
       obsidian: {
         title: "Obsidian vault integration",
         text: "A vault wired into the work around it, so the notes stay where the day already happens.",
+        steps: [
+          "Point Vault Talk at an Obsidian vault you already have.",
+          "Speak or type a question. The answer comes from those notes.",
+          "The model is Mistral, Ollama, or LM Studio. The notes stay in the vault.",
+        ],
       },
       website: {
         title: "Website creation",
         text: "A site shaped around the work, built and put online.",
+        steps: [
+          "Start from the pages and the copy that already exist.",
+          "Build a small site that states the offer, one proof, and how to write.",
+          "Put it on a host you already use, with a contact path that reaches you.",
+        ],
       },
       excel: {
         title: "Excel automation",
         text: "Sheets that check themselves and carry the numbers forward.",
+        steps: [
+          "Take the workbook people already fill in.",
+          "Script the repeated cleanup: types, duplicates, and the same columns every week.",
+          "Write the result back as a sheet they can open.",
+        ],
       },
       images: {
         title: "Image processing",
         text: "Pictures cropped, split, and cleaned as one step in a workflow.",
+        steps: [
+          "Drop in a folder of photos or scans.",
+          "Resize, crop, and rename to the sizes the site or the print shop expects.",
+          "Keep the originals. Write the processed files beside them.",
+        ],
       },
       inbox: {
         title: "Inbox and email automation",
         text: "Mail sorted and turned into the next useful thing, instead of another pile.",
+        steps: [
+          "Connect the mailbox you already read.",
+          "Sort new mail by sender and intent, and draft a short reply where the request repeats.",
+          "Leave anything unclear in the inbox for you to send.",
+        ],
       },
       meetings: {
         title: "Meeting notes into tasks",
         text: "A conversation that leaves as tasks, not as a transcript nobody opens.",
+        steps: [
+          "Paste the notes or the transcript from the call.",
+          "Pull out the decisions, the owners, and the dates.",
+          "Turn those into a task list you can file.",
+        ],
       },
       chatbot: {
         title: "Chatbot on an existing site",
         text: "A chat docked on a site that already exists, answering from that site.",
+        steps: [
+          "Read the public pages of the site you already have.",
+          "Add a small chat that answers only from that copy.",
+          "Send anything it cannot answer to the contact path.",
+        ],
       },
       search: {
         title: "Search across company documents",
         text: "Search that lands on the paragraph, not only the file name.",
+        steps: [
+          "Point search at the folders of PDFs and docs the team already keeps.",
+          "Ask in plain language. Each result quotes the file it came from.",
+          "Leave the files where they are.",
+        ],
       },
       papers: {
         title: "Research paper workflow",
         text: "From a PDF to notes, citations, and the next question.",
+        steps: [
+          "Drop a paper PDF onto the reading list.",
+          "Keep a short note: the question, the method, the result, and what it changes.",
+          "Link that note to the project it belongs to.",
+        ],
       },
     },
   },
@@ -144,7 +201,18 @@ export default {
       "Reach Jonas Wolber for research collaboration, questions about digital medicine and machine learning, or just to say hello.",
     label: "Contact",
     heading: "Let's talk",
-    subtitle: "Research collaboration, paper questions, speaking — pick a channel below.",
+    subtitle: "Research collaboration, paper questions, speaking — write here, or pick a channel below.",
+    formLabel: "Write directly",
+    name: "Name",
+    email: "Email",
+    message: "Message",
+    namePlaceholder: "Your name",
+    emailPlaceholder: "you@example.com",
+    messagePlaceholder: "What should I look at?",
+    send: "Send",
+    sending: "Sending…",
+    sent: "Sent. I have it.",
+    sendError: "That did not go through. Try again, or use LinkedIn.",
     links: [
       {
         label: "LinkedIn",

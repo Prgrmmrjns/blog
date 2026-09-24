@@ -40,6 +40,7 @@ export default {
     filterByTopic: "Nach Thema filtern",
     loadingPosts: "Beiträge werden geladen…",
     noPostsForTopic: "Keine Beiträge zu diesem Thema.",
+    emptyPosts: "Noch keine Beiträge.",
   },
   about: {
     title: "Über mich — Jonas Wolber",
@@ -85,6 +86,11 @@ export default {
     intro:
       "KI-Deployment, Automatisierung und persönliche Wissenssysteme. Das habe ich in Firmen und für Forschende gemacht. Das erste Gespräch ist kostenlos.",
     openCase: "Öffnen",
+    readWorkflow: "Ablauf",
+    back: "Alle Fälle",
+    workflow: "Ablauf",
+    github: "GitHub",
+    live: "Live-App",
     contactLabel: "Ein Gespräch, kostenlos",
     contactText: "Schreib auf LinkedIn, oder nutze die Kontaktseite. Dieselben Kanäle, die ich schon habe.",
     linkedin: "Auf LinkedIn schreiben",
@@ -93,42 +99,93 @@ export default {
       belegcheck: {
         title: "Belegcheck",
         text: "Rechnungs-PDFs: die Beträge, die Steuer und was noch offen ist.",
+        steps: [
+          "Eine Lieferantenrechnung als PDF im Browser öffnen.",
+          "Die Seite liest Lieferant, Netto, Steuer, Brutto, Fälligkeit und die Positionen.",
+          "Sie markiert eine Steuer, die nicht zur Summe passt, eine unbezahlte Rechnung nach dem Fälligkeitsdatum und eine Position, die nur teilweise gedeckt ist.",
+          "Eine Position als bezahlt zu markieren lässt die Rechnung teilweise offen, bis der Rest bezahlt ist.",
+        ],
       },
       obsidian: {
         title: "Obsidian-Vault-Anbindung",
         text: "Ein Vault, der an die Arbeit drumherum angeschlossen ist, damit die Notizen dort bleiben, wo der Tag schon stattfindet.",
+        steps: [
+          "Vault Talk auf einen Obsidian-Vault zeigen, den du schon hast.",
+          "Eine Frage sprechen oder tippen. Die Antwort kommt aus diesen Notizen.",
+          "Das Modell ist Mistral, Ollama oder LM Studio. Die Notizen bleiben im Vault.",
+        ],
       },
       website: {
         title: "Website erstellen",
         text: "Eine Seite, die zur Arbeit passt, gebaut und online.",
+        steps: [
+          "Von den Seiten und dem Text ausgehen, die es schon gibt.",
+          "Eine kleine Seite bauen: das Angebot, ein Beleg und wie man schreibt.",
+          "Auf einen Host legen, den du schon nutzt, mit einem Kontaktweg, der dich erreicht.",
+        ],
       },
       excel: {
         title: "Excel-Automatisierung",
         text: "Tabellen, die sich selbst prüfen und die Zahlen weitertragen.",
+        steps: [
+          "Die Arbeitsmappe nehmen, die Leute schon ausfüllen.",
+          "Die wiederkehrende Säuberung skripten: Typen, Duplikate und dieselben Spalten jede Woche.",
+          "Das Ergebnis als Tabelle zurückschreiben, die sich öffnen lässt.",
+        ],
       },
       images: {
         title: "Bildverarbeitung",
         text: "Bilder zuschneiden, trennen und säubern, als ein Schritt im Ablauf.",
+        steps: [
+          "Einen Ordner mit Fotos oder Scans hineinlegen.",
+          "Größe, Ausschnitt und Dateiname auf das bringen, was die Seite oder die Druckerei erwartet.",
+          "Die Originale behalten. Die bearbeiteten Dateien daneben schreiben.",
+        ],
       },
       inbox: {
         title: "Posteingang und E-Mail-Automatisierung",
         text: "Post sortiert und in das nächste Nützliche verwandelt, statt in einen weiteren Stapel.",
+        steps: [
+          "Das Postfach anbinden, das du schon liest.",
+          "Neue Post nach Absender und Anliegen sortieren und eine kurze Antwort entwerfen, wo sich die Anfrage wiederholt.",
+          "Unklares im Posteingang lassen, damit du es selbst schickst.",
+        ],
       },
       meetings: {
         title: "Besprechungsnotizen zu Aufgaben",
         text: "Ein Gespräch, das als Aufgaben zurückbleibt, nicht als Transkript, das niemand öffnet.",
+        steps: [
+          "Die Notizen oder das Transkript aus dem Gespräch einfügen.",
+          "Entscheidungen, Zuständige und Daten herausziehen.",
+          "Daraus eine Aufgabenliste machen, die sich ablegen lässt.",
+        ],
       },
       chatbot: {
         title: "Chatbot auf einer bestehenden Seite",
         text: "Ein Chat auf einer Seite, die es schon gibt, und der aus dieser Seite antwortet.",
+        steps: [
+          "Die öffentlichen Seiten der Website lesen, die es schon gibt.",
+          "Einen kleinen Chat ergänzen, der nur aus diesem Text antwortet.",
+          "Alles, was er nicht beantworten kann, an den Kontaktweg schicken.",
+        ],
       },
       search: {
         title: "Suche über Firmendokumente",
         text: "Suche, die beim Absatz landet, nicht nur beim Dateinamen.",
+        steps: [
+          "Die Suche auf die Ordner mit PDFs und Dokumenten zeigen, die das Team schon hat.",
+          "In normaler Sprache fragen. Jedes Ergebnis zitiert die Datei, aus der es kommt.",
+          "Die Dateien dort lassen, wo sie sind.",
+        ],
       },
       papers: {
         title: "Workflow für Forschungsarbeiten",
         text: "Vom PDF zu Notizen, Zitaten und der nächsten Frage.",
+        steps: [
+          "Ein Paper-PDF auf die Leseliste legen.",
+          "Eine kurze Notiz behalten: die Frage, die Methode, das Ergebnis und was es ändert.",
+          "Die Notiz mit dem Projekt verknüpfen, zu dem sie gehört.",
+        ],
       },
     },
   },
@@ -138,7 +195,18 @@ export default {
       "Kontakt zu Jonas Wolber für Forschungskooperationen, Fragen zu digitaler Medizin und maschinellem Lernen oder einfach zum Hallo sagen.",
     label: "Kontakt",
     heading: "Lass uns reden",
-    subtitle: "Forschungskooperation, Fragen zu Papers, Vorträge — wähle unten einen Kanal.",
+    subtitle: "Forschungskooperation, Fragen zu Papers, Vorträge — schreib hier, oder wähle unten einen Kanal.",
+    formLabel: "Direkt schreiben",
+    name: "Name",
+    email: "E-Mail",
+    message: "Nachricht",
+    namePlaceholder: "Dein Name",
+    emailPlaceholder: "du@example.com",
+    messagePlaceholder: "Worum geht es?",
+    send: "Senden",
+    sending: "Wird gesendet…",
+    sent: "Gesendet. Ich habe sie.",
+    sendError: "Das ist nicht angekommen. Nochmal versuchen, oder LinkedIn.",
     links: [
       {
         label: "LinkedIn",

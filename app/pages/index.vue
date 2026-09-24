@@ -35,7 +35,37 @@ const caseTitles = computed(() =>
     </header>
 
     <main class="mx-auto max-w-7xl px-6 pb-32">
-      <section class="relative mb-16 overflow-hidden rounded-[2rem] border border-gray-200 bg-white/90 px-6 py-8 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:px-8 sm:py-10 lg:mb-20">
+      <h2 class="mb-6 text-xl font-bold text-gold">{{ t("home.latestPosts") }}</h2>
+
+      <BlogTopicFilter v-model="selectedTopic" :topics="allTopics" />
+
+      <p
+        v-if="pending"
+        class="mb-16 rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50 lg:mb-20"
+      >
+        {{ t("blog.loadingPosts") }}
+      </p>
+      <div v-else-if="filteredPosts.length > 0" class="mb-16 grid gap-10 sm:grid-cols-2 lg:mb-20">
+        <BlogCard
+          v-for="post in filteredPosts"
+          :key="post.path"
+          :to="`/blog/${post.slug}`"
+          :slug="post.slug"
+          :title="post.title"
+          :excerpt="post.excerpt"
+          :date="post.date"
+          :topics="post.topics"
+          :tags="post.tags"
+        />
+      </div>
+      <p
+        v-else
+        class="mb-16 rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50 lg:mb-20"
+      >
+        {{ selectedTopic ? t("blog.noPostsForTopic") : t("blog.emptyPosts") }}
+      </p>
+
+      <section class="relative overflow-hidden rounded-[2rem] border border-gray-200 bg-white/90 px-6 py-8 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:px-8 sm:py-10">
         <div class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold/15 blur-3xl" />
         <div class="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-teal/10 blur-3xl" />
         <div class="relative z-10 grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
@@ -78,7 +108,7 @@ const caseTitles = computed(() =>
             <NuxtLink
               v-for="item in freelanceCases"
               :key="item.id"
-              :to="`/freelancing#${item.id}`"
+              :to="`/freelancing/${item.id}`"
               class="group overflow-hidden rounded-xl border border-gray-200/80 bg-[#efece3] dark:border-white/10 dark:bg-[#121212]"
             >
               <img
@@ -92,33 +122,6 @@ const caseTitles = computed(() =>
           </div>
         </div>
       </section>
-
-      <h2 class="mb-6 text-xl font-bold text-gold">{{ t("home.latestPosts") }}</h2>
-
-      <BlogTopicFilter v-model="selectedTopic" :topics="allTopics" />
-
-      <p
-        v-if="pending"
-        class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50"
-      >
-        {{ t("blog.loadingPosts") }}
-      </p>
-      <div v-else-if="filteredPosts.length > 0" class="grid gap-10 sm:grid-cols-2">
-        <BlogCard
-          v-for="post in filteredPosts"
-          :key="post.path"
-          :to="`/blog/${post.slug}`"
-          :slug="post.slug"
-          :title="post.title"
-          :excerpt="post.excerpt"
-          :date="post.date"
-          :topics="post.topics"
-          :tags="post.tags"
-        />
-      </div>
-      <p v-else-if="selectedTopic" class="rounded-2xl border border-gray-200 bg-white/80 px-6 py-12 text-center text-sm text-gray-600 dark:border-white/10 dark:bg-[#161616]/80 dark:text-cream/50">
-        {{ t("blog.noPostsForTopic") }}
-      </p>
     </main>
 
     <footer class="border-t border-gray-200 py-12 text-center text-xs text-gray-500 dark:border-white/5 dark:text-cream/30">

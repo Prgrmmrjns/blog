@@ -21,6 +21,28 @@ const links = computed(() => {
   }));
 });
 
+const name = ref("");
+const email = ref("");
+const message = ref("");
+const status = ref<"idle" | "sending" | "sent" | "error">("idle");
+
+async function submit() {
+  if (status.value === "sending") return;
+  status.value = "sending";
+  try {
+    await $fetch("/api/contact", {
+      method: "POST",
+      body: { name: name.value, email: email.value, message: message.value },
+    });
+    name.value = "";
+    email.value = "";
+    message.value = "";
+    status.value = "sent";
+  } catch {
+    status.value = "error";
+  }
+}
+
 useHead(() => ({
   title: t("contact.title"),
   meta: [{ name: "description", content: t("contact.metaDescription") }],
@@ -42,6 +64,66 @@ useHead(() => ({
             {{ t("contact.subtitle") }}
           </p>
         </header>
+
+        <form
+          class="mb-8 rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-sm dark:border-white/10 dark:bg-[#161616]/90 sm:p-6"
+          @submit.prevent="submit"
+        >
+          <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-teal dark:text-mint">
+            {{ t("contact.formLabel") }}
+          </p>
+          <div class="mt-4 grid gap-4">
+            <label class="block text-sm font-semibold text-gray-800 dark:text-cream">
+              {{ t("contact.name") }}
+              <input
+                v-model="name"
+                name="name"
+                type="text"
+                required
+                maxlength="200"
+                autocomplete="name"
+                :placeholder="t('contact.namePlaceholder')"
+                class="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm font-normal text-gray-900 outline-none ring-teal/30 placeholder:text-gray-400 focus:ring-2 dark:border-white/10 dark:bg-[#0e0e0e] dark:text-cream dark:placeholder:text-cream/30"
+              />
+            </label>
+            <label class="block text-sm font-semibold text-gray-800 dark:text-cream">
+              {{ t("contact.email") }}
+              <input
+                v-model="email"
+                name="email"
+                type="email"
+                required
+                maxlength="200"
+                autocomplete="email"
+                :placeholder="t('contact.emailPlaceholder')"
+                class="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm font-normal text-gray-900 outline-none ring-teal/30 placeholder:text-gray-400 focus:ring-2 dark:border-white/10 dark:bg-[#0e0e0e] dark:text-cream dark:placeholder:text-cream/30"
+              />
+            </label>
+            <label class="block text-sm font-semibold text-gray-800 dark:text-cream">
+              {{ t("contact.message") }}
+              <textarea
+                v-model="message"
+                name="message"
+                required
+                maxlength="4000"
+                rows="5"
+                :placeholder="t('contact.messagePlaceholder')"
+                class="mt-1.5 w-full resize-y rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm font-normal text-gray-900 outline-none ring-teal/30 placeholder:text-gray-400 focus:ring-2 dark:border-white/10 dark:bg-[#0e0e0e] dark:text-cream dark:placeholder:text-cream/30"
+              />
+            </label>
+          </div>
+          <div class="mt-4 flex flex-wrap items-center gap-3">
+            <button
+              type="submit"
+              class="inline-flex items-center rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-dark disabled:opacity-60 dark:bg-mint dark:text-[#0e0e0e] dark:hover:bg-mint-dark"
+              :disabled="status === 'sending'"
+            >
+              {{ status === "sending" ? t("contact.sending") : t("contact.send") }}
+            </button>
+            <p v-if="status === 'sent'" class="text-sm text-teal dark:text-mint">{{ t("contact.sent") }}</p>
+            <p v-else-if="status === 'error'" class="text-sm text-gold">{{ t("contact.sendError") }}</p>
+          </div>
+        </form>
 
         <div class="grid gap-4">
           <a

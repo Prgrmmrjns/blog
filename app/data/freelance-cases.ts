@@ -1,26 +1,40 @@
+export type FreelanceCaseId =
+  | "belegcheck"
+  | "obsidian"
+  | "website"
+  | "excel"
+  | "images"
+  | "inbox"
+  | "meetings"
+  | "chatbot"
+  | "search"
+  | "papers";
+
+export type FreelanceLink = {
+  href: string;
+  kind: "github" | "live";
+};
+
 export type FreelanceCase = {
-  id:
-    | "belegcheck"
-    | "obsidian"
-    | "website"
-    | "excel"
-    | "images"
-    | "inbox"
-    | "meetings"
-    | "chatbot"
-    | "search"
-    | "papers";
+  id: FreelanceCaseId;
   image: string;
-  href?: string;
+  links?: FreelanceLink[];
 };
 
 export const freelanceCases: FreelanceCase[] = [
   {
     id: "belegcheck",
     image: "/freelancing/belegcheck.png",
-    href: "https://belegcheck.vercel.app",
+    links: [
+      { href: "https://github.com/Prgrmmrjns/belegcheck", kind: "github" },
+      { href: "https://belegcheck.vercel.app", kind: "live" },
+    ],
   },
-  { id: "obsidian", image: "/freelancing/obsidian-vault.png" },
+  {
+    id: "obsidian",
+    image: "/freelancing/obsidian-vault.png",
+    links: [{ href: "https://github.com/Prgrmmrjns/vault-talk", kind: "github" }],
+  },
   { id: "website", image: "/freelancing/website.png" },
   { id: "excel", image: "/freelancing/excel.png" },
   { id: "images", image: "/freelancing/images.png" },
@@ -31,4 +45,6 @@ export const freelanceCases: FreelanceCase[] = [
   { id: "papers", image: "/freelancing/papers.png" },
 ];
 
-export type FreelanceCaseId = FreelanceCase["id"];
+export function freelanceCaseById(id: string) {
+  return freelanceCases.find((item) => item.id === id);
+}

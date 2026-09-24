@@ -44,36 +44,29 @@ function indexLabel(index: number) {
             v-for="(item, index) in freelanceCases"
             :id="item.id"
             :key="item.id"
-            class="scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/95 shadow-sm dark:border-white/10 dark:bg-[#161616]/95"
-            :class="index === 0 ? 'lg:col-span-2' : ''"
+            class="flex flex-col overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/95 shadow-sm dark:border-white/10 dark:bg-[#161616]/95"
           >
             <div class="relative aspect-[16/9] overflow-hidden bg-[#efece3] dark:bg-[#121212]">
               <FreelanceCaseArt :id="item.id" :label="cases[item.id].title" />
             </div>
-            <div class="px-5 py-6 sm:px-7 sm:py-7" :class="index === 0 ? 'sm:px-8 sm:py-8' : ''">
+            <NuxtLink
+              :to="`/freelancing/${item.id}`"
+              class="flex flex-1 flex-col px-5 py-6 transition hover:bg-teal/[0.04] sm:px-7 sm:py-7 dark:hover:bg-mint/[0.04]"
+            >
               <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-gold">
                 {{ indexLabel(index) }}
               </p>
-              <h2
-                class="mt-2 font-display text-2xl font-extrabold leading-tight text-gray-900 dark:text-cream sm:text-3xl"
-                :class="index === 0 ? 'lg:text-4xl' : ''"
-              >
+              <h2 class="mt-2 font-display text-2xl font-extrabold leading-tight text-gray-900 dark:text-cream sm:text-3xl">
                 {{ cases[item.id].title }}
               </h2>
-              <p class="mt-3 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-cream/65">
+              <p class="mt-3 text-base leading-relaxed text-gray-600 dark:text-cream/65">
                 {{ cases[item.id].text }}
               </p>
-              <a
-                v-if="item.href"
-                :href="item.href"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal dark:text-mint"
-              >
-                {{ t("freelancing.openCase") }}
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal dark:text-mint">
+                {{ t("freelancing.readWorkflow") }}
+                <span aria-hidden="true">→</span>
+              </span>
+            </NuxtLink>
           </article>
         </div>
 

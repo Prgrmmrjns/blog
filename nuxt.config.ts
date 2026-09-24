@@ -10,6 +10,10 @@ export default defineNuxtConfig({
   supabase: {
     redirect: false,
   },
+  runtimeConfig: {
+    slackBotToken: process.env.SLACK_BOT_TOKEN || "",
+    slackContactChannel: process.env.SLACK_CONTACT_CHANNEL || "D0BETM8FX0C",
+  },
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.ts",
