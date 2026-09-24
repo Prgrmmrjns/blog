@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Cluster randomization of 103 clinical officers">
+  <rect width="720" height="320" rx="20" fill="#0b2c31"/>
+  <circle cx="120" cy="160" r="54" fill="#1a7a84"/>
+  <text x="120" y="155" text-anchor="middle" fill="#ececbb" font-family="Georgia, serif" font-size="28">103</text>
+  <text x="120" y="182" text-anchor="middle" fill="#7adaa5" font-family="Inter, sans-serif" font-size="12">CLINICIANS</text>
+  <path d="M180 160 H300" stroke="#e1aa36" stroke-width="4"/>
+  <path d="M300 160 L420 80" stroke="#7adaa5" stroke-width="4" fill="none"/>
+  <path d="M300 160 L420 240" stroke="#239ba7" stroke-width="4" fill="none"/>
+  <rect x="430" y="36" width="250" height="88" rx="16" fill="#145c48"/>
+  <text x="555" y="78" text-anchor="middle" fill="#ececbb" font-family="Georgia, serif" font-size="30">52</text>
+  <text x="555" y="104" text-anchor="middle" fill="#7adaa5" font-family="Inter, sans-serif" font-size="13">LLM ARM</text>
+  <rect x="430" y="196" width="250" height="88" rx="16" fill="#1a4d55"/>
+  <text x="555" y="238" text-anchor="middle" fill="#ececbb" font-family="Georgia, serif" font-size="30">51</text>
+  <text x="555" y="264" text-anchor="middle" fill="#c9d6d4" font-family="Inter, sans-serif" font-size="13">CONTROL ARM</text>
+</svg>
